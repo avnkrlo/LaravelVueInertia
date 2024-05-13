@@ -15,7 +15,7 @@ class AuthController extends Controller
     public function index()
     {
         return Inertia::render('Users/Index', [
-            //
+            'users' => User::all(),
         ]);
     }
 
@@ -24,23 +24,18 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
-        // return Inertia::render('Users/Store', [
-        //     'user' => User::all()->map(function($user) {
-        //         return [
-        //             'id' => $user->id,
-        //             'role_id' => $user->role_id,
-        //             'department' => $user->department,
-        //             'first_name' => $user->first_name,
-        //             'middle_name' => $user->middle_name,
-        //             'last_name' => $user->last_name,
-        //             'email_address' => $user->email_address,
-        //             'username' => $user->username,
-        //             'password' => $user->password,
-        //             'confirm_password' => $user->password,
-        //         ];
-        //     }),
+        User::create($request->validate([
+            'department' => ['required'],
+            'first_name' => ['required'],
+            'middle_name' => ['required'],
+            'last_name' => ['required'],
+            'email_address' => ['required', 'email'],
+            'confirm_email' => ['required', 'email'],
+            'password' => ['required', 'min: 8', 'max: 16'],
+            'confirm_password' => ['required', 'min: 8', 'max: 16'],
+        ]));
 
-        // ]);
+        return to_route('users.index');
     }
 
     /**
