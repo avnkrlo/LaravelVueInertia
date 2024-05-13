@@ -1,6 +1,9 @@
 <script setup>
-
+    
 </script>
+
 <template>
-    <h1>Login</h1>
+    <div>
+        <h1>Welcome Page</h1>
+    </div>
 </template>
