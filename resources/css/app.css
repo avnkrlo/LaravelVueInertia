@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@layer base {
+    @font-face {
+        font-family: "Oswald";
+        src: url("../public/fonts/Oswald-VariableFont_wght.ttf");
+        font-weight: 400;
+        font-style: normal;
+    }
+  }

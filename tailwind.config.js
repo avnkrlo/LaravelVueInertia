@@ -11,3 +11,13 @@ export default {
   plugins: [],
 }
 
+module.exports = {
+  theme: {
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+      oswald: ["Oswald", "sans-serif"],
+    },
+  },
+  plugins: [],
+};
+

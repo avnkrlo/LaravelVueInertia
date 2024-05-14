@@ -24,18 +24,7 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
-        User::create($request->validate([
-            'department' => ['required'],
-            'first_name' => ['required'],
-            'middle_name' => ['required'],
-            'last_name' => ['required'],
-            'email_address' => ['required', 'email'],
-            'confirm_email' => ['required', 'email'],
-            'password' => ['required', 'min: 8', 'max: 16'],
-            'confirm_password' => ['required', 'min: 8', 'max: 16'],
-        ]));
-
-        return to_route('users.index');
+        
     }
 
     /**
