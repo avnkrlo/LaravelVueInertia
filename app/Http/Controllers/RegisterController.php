@@ -27,15 +27,17 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'department' => 'required',
             'first_name' => 'required|string|max:50',
             'last_name' => 'required|string|max:50',
             'email_address' => 'required|email|unique:users',
-            'password' => 'required|string|min:8|max:16',
+            'password' => 'required|min:8|max:16|confirmed',
         ]);
 
         DB::beginTransaction();
         try {
             User::create([
+                'department' => $request->department,
                 'first_name' => $request->first_name,
                 'last_name' => $request->last_name,
                 'email_address' => $request->email_address,
@@ -43,44 +45,12 @@ class RegisterController extends Controller
             ]);
 
             DB::commit();
-            return Redirect::route('guest.index')->with('success', 'Accoutn has been registered!');
+            return Redirect::route('guest.index');
         }
         catch (\Exception $ex) {
             DB::rollBack();
-            return Redirect::route('guest.create')->with('error', 'Error has occured!' . $ex->getMessage());
+            return Redirect::route('guest.create');
         }
-        
-
-        
-        // $request->validate([
-        //     'department' => 'required|string',
-        //     'first_name' => 'required|string',
-        //     'last_name' => 'required|string',
-        //     'email_address' => 'required|string|email|unique:users',
-        //     'password' => 'required|string|min:8|max:16'
-        // ]);
-
-        // DB::beginTransaction();
-        // try {
-        //     User::create([
-        //         'department' => $request->department,
-        //         'first_name' => $request->first_name,
-        //         'last_name' => $request->last_name,
-        //         'email_address' => $request->email_address,
-        //         'password' => Hash::make($request->password),
-        //     ]);
-            
-        //     DB::commit();
-        //     return Redirect::route('guest.iStore')->with('success', 'Account has been registered successfully!');
-            
-            
-        // } 
-        // catch (\Exception $e) {
-        //     DB::rollBack();
-        //     return back()->withInput()->with('error', 'Error has occurred!' . $e->getMessage());
-            
-            
-        // }
     }
 
     /**

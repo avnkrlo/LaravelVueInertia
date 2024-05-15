@@ -25,6 +25,13 @@ const showAlert = () => {
                 <input type="password" class="grow" placeholder="•••••••"/>
             </label>
             
+            <div class="form-control">
+                <label class="label cursor-pointer">
+                    <span class="label-text">Remember me</span> 
+                    <input type="checkbox" class="checkbox" />
+                </label>
+            </div>
+
             <div class="card-actions justify-center">
                 <Link :href="route('guest.index')" class="btn btn-active btn-primary">LOGIN</Link>
                 <Link :href="route('guest.create')" class="btn btn-active btn-ghost">CREATE AN ACCOUNT</Link>
