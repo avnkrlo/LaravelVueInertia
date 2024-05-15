@@ -27,7 +27,7 @@ const showAlert = () => {
             
             <div class="card-actions justify-center">
                 <Link :href="route('guest.index')" class="btn btn-active btn-primary">LOGIN</Link>
-                <Link :href="route('guest.store')" class="btn btn-active btn-ghost">CREATE AN ACCOUNT</Link>
+                <Link :href="route('guest.create')" class="btn btn-active btn-ghost">CREATE AN ACCOUNT</Link>
             </div>
         </div>
     </div>

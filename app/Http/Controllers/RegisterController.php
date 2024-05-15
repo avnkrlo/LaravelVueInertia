@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class RegisterController extends Controller
 {
@@ -14,7 +16,7 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Users/Store', [
+        return Inertia::render('Users/Create', [
             'users' => User::all(),
         ]);
     }
@@ -25,27 +27,60 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'department' => 'required|string',
-            'first_name' => 'required|string',
-            'last_name' => 'required|string',
-            'email_address' => 'required|string|email|unique:users',
-            'password' => 'required|string|min:8|max:16'
+            'first_name' => 'required|string|max:50',
+            'last_name' => 'required|string|max:50',
+            'email_address' => 'required|email|unique:users',
+            'password' => 'required|string|min:8|max:16',
         ]);
 
-        try{
-            $user = User::create([
-                'department' => $request->department,
+        DB::beginTransaction();
+        try {
+            User::create([
                 'first_name' => $request->first_name,
                 'last_name' => $request->last_name,
                 'email_address' => $request->email_address,
                 'password' => Hash::make($request->password),
             ]);
 
-            return redirect()->route('guest.index')->with('success', 'User has been created successfully!');
-        } 
-        catch (\Exception $e) {
-            return back()->withInput()->with('error', 'Error has occurred!' . $e->getMessage());
+            DB::commit();
+            return Redirect::route('guest.index')->with('success', 'Accoutn has been registered!');
         }
+        catch (\Exception $ex) {
+            DB::rollBack();
+            return Redirect::route('guest.create')->with('error', 'Error has occured!' . $ex->getMessage());
+        }
+        
+
+        
+        // $request->validate([
+        //     'department' => 'required|string',
+        //     'first_name' => 'required|string',
+        //     'last_name' => 'required|string',
+        //     'email_address' => 'required|string|email|unique:users',
+        //     'password' => 'required|string|min:8|max:16'
+        // ]);
+
+        // DB::beginTransaction();
+        // try {
+        //     User::create([
+        //         'department' => $request->department,
+        //         'first_name' => $request->first_name,
+        //         'last_name' => $request->last_name,
+        //         'email_address' => $request->email_address,
+        //         'password' => Hash::make($request->password),
+        //     ]);
+            
+        //     DB::commit();
+        //     return Redirect::route('guest.iStore')->with('success', 'Account has been registered successfully!');
+            
+            
+        // } 
+        // catch (\Exception $e) {
+        //     DB::rollBack();
+        //     return back()->withInput()->with('error', 'Error has occurred!' . $e->getMessage());
+            
+            
+        // }
     }
 
     /**

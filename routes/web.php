@@ -5,10 +5,6 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// Route::get('/', function () {
-//     return Inertia::render('User/Index');
-// });
-
 
 Route::middleware('guest')->group(function (){
     //Auth Controller
@@ -18,7 +14,9 @@ Route::middleware('guest')->group(function (){
    });
    
    Route::controller(RegisterController::class)->group(function(){
-        Route::get('/store', 'index')->name('guest.store');
+        Route::get('create', 'index')->name('guest.create');
+
+        Route::post('store', 'store')->name('guest.store');
    });
 });
 

@@ -14,8 +14,7 @@ export default {
 module.exports = {
   theme: {
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
-      oswald: ["Oswald", "sans-serif"],
+      comfortaa: ['"Comfortaa"', "sans"]
     },
   },
   plugins: [],
