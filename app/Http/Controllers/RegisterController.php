@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\RegisterRequest;
 use App\Models\User;
-use Illuminate\Auth\Events\Validated;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -20,24 +18,39 @@ class RegisterController extends Controller
     {
         return Inertia::render('Users/Create', [
             'users' => User::all(),
-
         ]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(RegisterRequest $request)
+    public function store(Request $request)
     {
-        $request->validated(
+        $request->validate([
+            'department' => 'required',
+            'first_name' => 'required|string|max:50',
+            'last_name' => 'required|string|max:50',
+            'email_address' => 'required|email|unique:users',
+            'password' => 'required|min:8|max:16|confirmed',
+        ]);
+
+        DB::beginTransaction();
+        try {
             User::create([
                 'department' => $request->department,
                 'first_name' => $request->first_name,
                 'last_name' => $request->last_name,
                 'email_address' => $request->email_address,
                 'password' => Hash::make($request->password),
-            ])
-        );      
+            ]);
+
+            DB::commit();
+            return Redirect::route('guest.index');
+        }
+        catch (\Exception $ex) {
+            DB::rollBack();
+            return Redirect::route('guest.create');
+        }
     }
 
     /**
