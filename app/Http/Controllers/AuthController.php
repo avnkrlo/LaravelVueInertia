@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use GuzzleHttp\Promise\Create;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Illuminate\Http\Request;
+use App\Http\Requests\AuthRequest;
+use Illuminate\Auth\Middleware\Authenticate;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -24,7 +26,20 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $credentials = $request->validate([
+            'email_address' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+ 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+ 
+            return redirect()->intended('dashboard');
+        }
+ 
+        return back()->withErrors([
+            'email_address' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email_address');
     }
 
     /**
@@ -32,7 +47,7 @@ class AuthController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
     }
 
     /**

@@ -15,7 +15,7 @@ const form = useForm({
 });
 
 function submit() {
-    form.post(route('guest.store'), {
+    form.post(route('register.store'), {
         preserveScroll: true,
         onSuccess: () => {
             toast.success("Account has been registered successfully!", {timeout: 2000}),
@@ -63,7 +63,7 @@ function submit() {
 
                     <div class="justify-center mt-2 card-actions">
                         <button type="submit" class="w-full max-w-xs btn btn-active btn-primary">CREATE ACCOUNT</button>
-                        <Link :href="route('guest.index')" class="w-full max-w-xs btn btn-active btn-ghost">LOGIN</Link>
+                        <Link :href="route('auth.index')" class="w-full max-w-xs btn btn-active btn-ghost">LOGIN</Link>
                     </div>
                 </div>
             </div>
