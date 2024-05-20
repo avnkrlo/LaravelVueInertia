@@ -40,7 +40,7 @@ function submit() {
                             <option>Multi-Lingual</option>
                             <option>Software Development</option>
                             <option>IT</option>
-                        </select>
+                        </select> 
                     </label>
 
                     <label for="first_name" class="uppercase form-label">First Name:</label>

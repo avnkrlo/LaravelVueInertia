@@ -8,8 +8,8 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Auth;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
+//Guest Access
 Route::middleware('guest')->group(function (){
-    //Auth Controller
     Route::controller(AuthController::class)->group(function () {
         Route::get('/', 'index')->name('auth.index');
 
@@ -24,10 +24,11 @@ Route::middleware('guest')->group(function (){
    });
 });
 
+//Authenticated User
 Route::middleware('auth')->group(function() {
     Route::controller(DashboardController::class)->group(function(){
-        Route::get('dashboard', 'index')->name('dashboard');
+        Route::get('dashboard', 'index')->name('dashboard.index');
         
-        
+        Route::post('logout', 'destroy')->name('dashboard.destroy');
     });
 });
