@@ -16,6 +16,7 @@ use App\Http\Controllers\MLDProofreadingController;
 use App\Http\Controllers\MLDQuoteController;
 use App\Http\Controllers\MLDTeachingController;
 use App\Http\Controllers\MLDTranslationController;
+use App\Http\Controllers\SDSmartphoneDevController;
 
 //Guest Access
 Route::middleware('guest')->group(function (){
@@ -71,6 +72,38 @@ Route::middleware('auth')->group(function() {
 
     Route::controller(MLDEvaluationController::class)->group(function() {
         Route::get('mld-test-rating-and-evaluation', 'index')->name('mld-evaluation.index');
+    });
+
+    Route::controller(SDSmartphoneDevController::class)->group(function() {
+        Route::get('sd-smmartphone-dev', 'index')->name('sd-smartphone-dev.index');
+    });
+//
+    Route::controller(SDSmartphoneDevController::class)->group(function() {
+        Route::get('sd-windeskapp-dev', 'index')->name('sd-windeskapp-dev.index');
+    });
+
+    Route::controller(SDSmartphoneDevController::class)->group(function() {
+        Route::get('sd-web-sys', 'index')->name('sd-web-sys.index');
+    });
+
+    Route::controller(SDSmartphoneDevController::class)->group(function() {
+        Route::get('sd-embedded-sys', 'index')->name('sd-embedded-sys.index');
+    });
+
+    Route::controller(SDSmartphoneDevController::class)->group(function() {
+        Route::get('sd-backend-dev', 'index')->name('sd-backend-dev.index');
+    });
+
+    Route::controller(SDSmartphoneDevController::class)->group(function() {
+        Route::get('sd-xcel-macro-dev', 'index')->name('sd-xcel-macro-dev.index');
+    });
+
+    Route::controller(SDSmartphoneDevController::class)->group(function() {
+        Route::get('sd-rpa-scenario-prod', 'index')->name('sd-rpa-scenario-prod.index');
+    });
+
+    Route::controller(SDSmartphoneDevController::class)->group(function() {
+        Route::get('sd-multimedia-prod', 'index')->name('sd-multimedia-prod.index');
     });
 
     Route::controller(DataEntryQuoteController::class)->group(function() {
