@@ -75,7 +75,7 @@ Route::middleware('auth')->group(function() {
     });
 
     Route::controller(SDSmartphoneDevController::class)->group(function() {
-        Route::get('sd-smmartphone-dev', 'index')->name('sd-smartphone-dev.index');
+        Route::get('sd-smartphone-dev', 'index')->name('sd-smartphone-dev.index');
     });
 //
     Route::controller(SDSmartphoneDevController::class)->group(function() {
