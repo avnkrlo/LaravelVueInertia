@@ -59,14 +59,14 @@ const goToYT = () => {
 <template>
     <nav class="fixed top-0 z-20 w-full bg-white border-b border-gray-200 dark:bg-gray-900 start-0 dark:border-gray-600">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
-            <Link :href="route('dashboard.index')" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <Link :href="route('index')" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="Images/cck.png" class="h-8"/>
             </Link>
 
             <div :class="['w-full md:block md:w-auto', { 'hidden': !isNavbarOpen }]" id="navbar-dropdown">
                 <ul class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                        <Link :href="route('dashboard.index')" class="block px-3 py-2 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">
+                        <Link :href="route('index')" class="block px-3 py-2 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">
                             Home
                         </Link>
                     </li>
@@ -224,7 +224,9 @@ const goToYT = () => {
 
                                     <li class="mt-1 mb-1">
                                         <Link :href="route('sd-xcel-macro-dev.index')" class="flex items-center px-4 py-2 font-thin hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                            
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M 15.851562 2.0332031 C 15.454446 2.0917651 15.074935 2.2655063 14.767578 2.5449219 L 14.765625 2.5449219 C 13.277863 3.9005836 10.616498 6.3243944 8.1972656 8.5273438 L 5.84375 6.734375 L 5.8359375 6.7285156 C 5.1392465 6.2166177 4.2073179 6.2866386 3.5683594 6.7441406 C 3.3534247 6.8975345 3.179469 7.0602489 2.9960938 7.2246094 C 2.8123509 7.3892993 2.65625 7.5332031 2.65625 7.5332031 L 2.7128906 7.4863281 C 1.8204736 8.2023368 1.7705385 9.5910312 2.6132812 10.367188 L 2.6152344 10.369141 L 4.3964844 11.988281 C 3.5664818 12.744059 2.6171875 13.609375 2.6171875 13.609375 L 2.6132812 13.611328 L 2.6113281 13.613281 C 1.7701612 14.390063 1.8188576 15.778914 2.7128906 16.494141 L 2.65625 16.445312 C 2.65625 16.445312 2.8103543 16.588916 2.9941406 16.753906 C 3.1779269 16.918896 3.3539505 17.08207 3.5703125 17.236328 C 4.2099405 17.692377 5.1382701 17.762436 5.8359375 17.251953 L 5.84375 17.246094 L 8.2011719 15.451172 L 14.769531 21.425781 C 15.386532 21.986866 16.295571 22.122799 17.050781 21.757812 C 18.278625 21.166887 20.046146 20.315485 20.783203 19.960938 C 21.5262 19.604374 22.001953 18.845527 22.001953 18.023438 L 22.001953 5.9335938 C 22.001953 5.110945 21.525211 4.3516313 20.779297 3.9960938 L 20.777344 3.9941406 C 20.089585 3.6662272 18.39449 2.8576642 17.039062 2.2109375 C 16.663742 2.031938 16.24868 1.9746412 15.851562 2.0332031 z M 17 4.4082031 C 18.123459 4.9444456 19.380428 5.544512 19.917969 5.8007812 C 19.970569 5.8257663 20.001953 5.8731922 20.001953 5.9335938 L 20.001953 18.023438 C 20.001953 18.085348 19.970969 18.132767 19.917969 18.158203 C 19.340838 18.43582 18.085137 19.039955 17 19.5625 L 17 4.4082031 z M 15 5.0371094 L 15 7.7636719 L 11.09375 10.736328 L 9.8144531 9.7617188 C 11.735091 8.0128243 13.554462 6.3537546 15 5.0371094 z M 4.7128906 8.3867188 L 15 16.228516 L 15 18.931641 L 4.0507812 8.9707031 C 4.0752634 8.9480007 4.178441 8.850757 4.3300781 8.7148438 C 4.4912252 8.5704065 4.6942539 8.4020803 4.7128906 8.3867188 z M 15 10.277344 L 15 13.712891 L 12.744141 11.994141 L 15 10.277344 z M 5.8808594 13.339844 L 6.6972656 14.082031 L 4.7128906 15.591797 C 4.6939997 15.57613 4.4907783 15.40989 4.3300781 15.265625 C 4.178427 15.129484 4.0751918 15.03049 4.0507812 15.007812 C 4.1027294 14.960483 4.9781341 14.16179 5.8808594 13.339844 z"></path>
+                                            </svg>
                                             <span class="ml-2">Excel Macro Development</span>
                                         </Link>
                                     </li>
@@ -237,7 +239,12 @@ const goToYT = () => {
 
                                     <li class="mt-1 mb-1">
                                         <Link :href="route('sd-multimedia-prod.index')" class="flex items-center px-4 py-2 font-thin hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                            <span class="ml-2">Multimedia Production</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+                                                <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+                                                <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1"/>
+                                                <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                                            </svg>
+                                            <span class="ml-2.5">Multimedia Production</span>
                                         </Link>
                                     </li>
                                 </ul>
@@ -295,33 +302,30 @@ const goToYT = () => {
         </div>
     </nav>
 
-    
-
+    <!-- JUMBOTRON -->
     <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
         <div class="max-w-screen-xl px-4 py-24 mx-auto text-center lg:py-56">
-            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
-            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                    Get started
-                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
+            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
+                It takes more than interest, we have plans and strategies specifically for your business needs.
+            </h1>
+            
+            <div class="grid place-content-end">
                 <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-white rounded-lg hover:text-gray-900 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                    Learn more
+                    GET QUOTE
                 </a>  
             </div>
         </div>
     </section>
 
-    <h1>Data Entry Services</h1>
+    <div>
+        
+    </div>
 
     <footer class="bg-white dark:bg-gray-900">
         <div class="w-full max-w-screen-xl p-4 py-6 mx-auto lg:py-8">
             <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
-                <Link :href="route('dashboard.index')" class="flex items-center">
+                <Link :href="route('index')" class="flex items-center">
                     <img src="Images/cck_logo.png" class="h-25 me-3" alt="FlowBite Logo" />
                     <span class="self-center font-semibold whitespace-nowrap dark:text-white">CCK City Network, Inc.</span>
                 </Link>

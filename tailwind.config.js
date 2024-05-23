@@ -14,7 +14,7 @@ export default {
 module.exports = {
   theme: {
     fontFamily: {
-      comfortaa: ['"Comfortaa"', "sans"]
+      comfortaa: ['"Comfortaa"', "sans-serif"]
     },
   },
   plugins: [],

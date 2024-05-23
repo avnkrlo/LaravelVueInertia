@@ -3,20 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Inertia\Inertia;
 use Illuminate\Http\Request;
-use App\Http\Requests\AuthRequest;
-use Illuminate\Auth\Middleware\Authenticate;
-use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
-class AuthController extends Controller
+class SDQuoteController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Inertia::render('Users/Index', [
+        return Inertia::render('Users/SD_Quote', [
             'users' => User::all(),
         ]);
     }
@@ -26,20 +23,7 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
-        $credentials = $request->validate([
-            'email_address' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
- 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
- 
-            return redirect()->intended('dashboard.index');
-        }
- 
-        return back()->withErrors([
-            'email_address' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email_address');
+        //
     }
 
     /**
@@ -47,7 +31,7 @@ class AuthController extends Controller
      */
     public function show(string $id)
     {
-        
+        //
     }
 
     /**

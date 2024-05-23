@@ -11,35 +11,19 @@ use App\Http\Controllers\DataConversionController;
 use App\Http\Controllers\DataEntryQuoteController;
 use App\Http\Controllers\DataProcessingController;
 use App\Http\Controllers\DEServicesController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MLDEvaluationController;
 use App\Http\Controllers\MLDProofreadingController;
 use App\Http\Controllers\MLDQuoteController;
 use App\Http\Controllers\MLDTeachingController;
 use App\Http\Controllers\MLDTranslationController;
+use App\Http\Controllers\SDQuoteController;
 use App\Http\Controllers\SDSmartphoneDevController;
 
 //Guest Access
 Route::middleware('guest')->group(function (){
-    Route::controller(AuthController::class)->group(function () {
-        Route::get('/', 'index')->name('auth.index');
-
-        Route::post('login', 'store')->name('login');
-        
-   });
-   
-   Route::controller(RegisterController::class)->group(function(){
-        Route::get('create', 'index')->name('register.create');
-
-        Route::post('store', 'store')->name('register.store');
-   });
-});
-
-//Authenticated User
-Route::middleware('auth')->group(function() {
-    Route::controller(DashboardController::class)->group(function(){
-        Route::get('dashboard', 'index')->name('dashboard.index');
-        
-        Route::post('logout', 'destroy')->name('dashboard.destroy');
+    Route::controller(IndexController::class)->group(function(){
+        Route::get('/', 'index')->name('index');
     });
 
     Route::controller(DEServicesController::class)->group(function() {
@@ -77,7 +61,7 @@ Route::middleware('auth')->group(function() {
     Route::controller(SDSmartphoneDevController::class)->group(function() {
         Route::get('sd-smartphone-dev', 'index')->name('sd-smartphone-dev.index');
     });
-//
+
     Route::controller(SDSmartphoneDevController::class)->group(function() {
         Route::get('sd-windeskapp-dev', 'index')->name('sd-windeskapp-dev.index');
     });
@@ -114,6 +98,10 @@ Route::middleware('auth')->group(function() {
         Route::get('mld-quote', 'index')->name('mldquote.index');
     });
 
+    Route::controller(SDQuoteController::class)->group(function() {
+        Route::get('sd-quote', 'index')->name('sdquote.index');
+    });
+
     Route::controller(BlogController::class)->group(function() {
         Route::get('blog', 'index')->name('blog.index');
     });
@@ -121,4 +109,9 @@ Route::middleware('auth')->group(function() {
     Route::controller(ContactController::class)->group(function() {
         Route::get('contact', 'index')->name('contact.index'); 
     });
+});
+
+//Authenticated User
+Route::middleware('auth')->group(function() {
+    
 });
