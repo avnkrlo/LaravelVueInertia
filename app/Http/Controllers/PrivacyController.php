@@ -6,14 +6,14 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class SDSmartphoneDevController extends Controller
+class PrivacyController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Inertia::render('Users/SD_SmartphoneDev', [
+        return Inertia::render('Users/PrivacyPolicy', [
             'users' => User::all(),
         ]);
     }

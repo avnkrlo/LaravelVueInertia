@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./resources/**/*.blade.php",
@@ -7,16 +8,11 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'sans': ['"Poppins"'],
+    },
   },
   plugins: [],
 }
 
-module.exports = {
-  theme: {
-    fontFamily: {
-      comfortaa: ['"Comfortaa"', "sans-serif"]
-    },
-  },
-  plugins: [],
-};
 

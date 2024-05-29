@@ -6,14 +6,14 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class MLDProofreadingController extends Controller
+class MLDServicesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Inertia::render('Users/MLD_Proofreading', [
+        return Inertia::render('Users/MLD_Services', [
             'users' => User::all(),
         ]);
     }

@@ -7,7 +7,9 @@ import UnoCSS from 'unocss/vite'
 export default defineConfig({
     plugins: [
         UnoCSS(),
-        laravel(['resources/js/app.js']),
+        laravel(['resources/js/app.js', 
+            'resources/css/app.css',
+        ]),
         vue({
             template: {
                 transformAssetUrls: {
@@ -29,6 +31,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
+            '@': '/resources/js',
             'ziggy-js': path.resolve('./vendor/tightenco/ziggy/dist'),
         },
     },

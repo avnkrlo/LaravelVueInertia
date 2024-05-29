@@ -6,14 +6,14 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class DataProcessingController extends Controller
+class RecruitmentController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Inertia::render('Users/DataProcessing', [
+        return Inertia::render('Users/Recruitment', [
             'users' => User::all(),
         ]);
     }

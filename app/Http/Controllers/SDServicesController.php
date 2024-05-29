@@ -6,14 +6,14 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class SDXcelMacroDevController extends Controller
+class SDServicesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Inertia::render('Users/SD_XcelMacroDev', [
+        return Inertia::render('Users/SoftDev_Services', [
             'users' => User::all(),
         ]);
     }

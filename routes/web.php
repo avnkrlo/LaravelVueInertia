@@ -1,24 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DataCleansingController;
-use App\Http\Controllers\DataConversionController;
 use App\Http\Controllers\DataEntryQuoteController;
-use App\Http\Controllers\DataProcessingController;
 use App\Http\Controllers\DEServicesController;
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\MLDEvaluationController;
-use App\Http\Controllers\MLDProofreadingController;
 use App\Http\Controllers\MLDQuoteController;
-use App\Http\Controllers\MLDTeachingController;
-use App\Http\Controllers\MLDTranslationController;
+use App\Http\Controllers\MLDServicesController;
+use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\RecruitmentController;
 use App\Http\Controllers\SDQuoteController;
-use App\Http\Controllers\SDSmartphoneDevController;
+use App\Http\Controllers\SDServicesController;
 
 //Guest Access
 Route::middleware('guest')->group(function (){
@@ -27,67 +20,15 @@ Route::middleware('guest')->group(function (){
     });
 
     Route::controller(DEServicesController::class)->group(function() {
-        Route::get('services', 'index')->name('services.index');
+        Route::get('de-services', 'index')->name('deservices.index');
     });
 
-    Route::controller(DataProcessingController::class)->group(function() {
-        Route::get('processing', 'index')->name('processing.index');
+    Route::controller(MLDServicesController::class)->group(function() {
+        Route::get('mld-services', 'index')->name('mldservices.index');
     });
 
-    Route::controller(DataConversionController::class)->group(function() {
-        Route::get('conversion', 'index')->name('conversion.index');
-    });
-
-    Route::controller(DataCleansingController::class)->group(function() {
-        Route::get('cleansing', 'index')->name('cleansing.index');
-    });
-
-    Route::controller(MLDProofreadingController::class)->group(function() {
-        Route::get('mld-proofreading-services', 'index')->name('mld-proofreading.index');
-    });
-
-    Route::controller(MLDTeachingController::class)->group(function() {
-        Route::get('mld-online-english-language-teaching', 'index')->name('mld-teaching.index');
-    });
-
-    Route::controller(MLDTranslationController::class)->group(function() {
-        Route::get('mld-translation-services', 'index')->name('mld-translation.index');
-    });
-
-    Route::controller(MLDEvaluationController::class)->group(function() {
-        Route::get('mld-test-rating-and-evaluation', 'index')->name('mld-evaluation.index');
-    });
-
-    Route::controller(SDSmartphoneDevController::class)->group(function() {
-        Route::get('sd-smartphone-dev', 'index')->name('sd-smartphone-dev.index');
-    });
-
-    Route::controller(SDSmartphoneDevController::class)->group(function() {
-        Route::get('sd-windeskapp-dev', 'index')->name('sd-windeskapp-dev.index');
-    });
-
-    Route::controller(SDSmartphoneDevController::class)->group(function() {
-        Route::get('sd-web-sys', 'index')->name('sd-web-sys.index');
-    });
-
-    Route::controller(SDSmartphoneDevController::class)->group(function() {
-        Route::get('sd-embedded-sys', 'index')->name('sd-embedded-sys.index');
-    });
-
-    Route::controller(SDSmartphoneDevController::class)->group(function() {
-        Route::get('sd-backend-dev', 'index')->name('sd-backend-dev.index');
-    });
-
-    Route::controller(SDSmartphoneDevController::class)->group(function() {
-        Route::get('sd-xcel-macro-dev', 'index')->name('sd-xcel-macro-dev.index');
-    });
-
-    Route::controller(SDSmartphoneDevController::class)->group(function() {
-        Route::get('sd-rpa-scenario-prod', 'index')->name('sd-rpa-scenario-prod.index');
-    });
-
-    Route::controller(SDSmartphoneDevController::class)->group(function() {
-        Route::get('sd-multimedia-prod', 'index')->name('sd-multimedia-prod.index');
+    Route::controller(SDServicesController::class)->group(function() {
+        Route::get('sd-services', 'index')->name('sdservices.index');
     });
 
     Route::controller(DataEntryQuoteController::class)->group(function() {
@@ -109,9 +50,12 @@ Route::middleware('guest')->group(function (){
     Route::controller(ContactController::class)->group(function() {
         Route::get('contact', 'index')->name('contact.index'); 
     });
-});
 
-//Authenticated User
-Route::middleware('auth')->group(function() {
-    
+    Route::controller(PrivacyController::class)->group(function() {
+        Route::get('privacy-policy', 'index')->name('privacy.index');
+    });
+
+    Route::controller(RecruitmentController::class)->group(function() {
+        Route::get('recruitment', 'index')->name('recruitment.index');
+    });
 });
