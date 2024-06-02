@@ -14,18 +14,15 @@
             <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white mt-10">
                 Your Dream Job Might Be Waiting For You.
             </h2>
-            
-            <div class="grid place-content-end">
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-white rounded-lg hover:text-gray-900 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                    GET QUOTE
-                </a>  
-            </div>
         </div>
     </section>
 
-    <h1 class="mt-10 grid place-content-center mx-auto italic font-bold">CCK RECRUITMENT</h1>
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+        <h1 class="grid place-content-center mx-auto italic font-bold text-yellow-300">CCK RECRUITMENT</h1>
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+
     <div class="flex items-justify max-w-screen-xl mx-auto">
-        <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
+        <div class="ml-10 shadow-xl card w-96 bg-base-300">
             <figure>
                 <img src="Images/accounting.jpg" class="max-w-screen-sm"/>
             </figure>
@@ -53,7 +50,7 @@
             </div>
         </div>
 
-        <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
+        <div class="ml-10 shadow-xl card w-96 bg-base-300">
             <figure>
                 <img src="Images/data-entry.jpg" class="max-w-screen-sm">
             </figure>
@@ -76,7 +73,7 @@
             </div>
         </div>
 
-        <div class="mt-10 ml-10 shadow-lg card w-96 bg-base-300">
+        <div class="ml-10 shadow-lg card w-96 bg-base-300">
             <figure>
                 <img src="Images/nurse.jpg"/>
             </figure>
@@ -101,9 +98,12 @@
     </div>
 
     <!-- MLD RECRUITMENT SECTION-->
-    <h1 class="mt-10 grid place-content-center mx-auto italic font-bold">MULTILINGUAL PROCESSING DEPARTMENT</h1>
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+        <h1 class="grid place-content-center mx-auto text-yellow-300 italic font-bold">MULTILINGUAL PROCESSING DEPARTMENT</h1>
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+
     <div class="flex max-w-screen-xl mx-auto mb-5">
-        <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
+        <div class="ml-10 shadow-xl card w-96 bg-base-300">
             <figure>
                 <img src="Images/proofreader.jpg" class="max-w-screen-sm"/>
             </figure>
@@ -123,7 +123,7 @@
             </div>
         </div>
 
-        <div class="mt-10 ml-10 shadow-xl card w-96 h-90 bg-base-300">
+        <div class="ml-10 shadow-xl card w-96 h-90 bg-base-300">
             <figure>
                 <img src="Images/test-rater.jpg" class="max-w-screen-sm">
             </figure>
@@ -143,7 +143,7 @@
             </div>
         </div>
 
-        <div class="mt-10 ml-10 shadow-lg card w-96 bg-base-300">
+        <div class="ml-10 shadow-lg card w-96 bg-base-300">
             <figure>
                 <img src="Images/sales-manager.jfif"/>
             </figure>
@@ -183,9 +183,12 @@
     </div>
 
     <!-- SD RECRUITMENT SECTION -->
-    <h1 class="mt-10 grid place-content-center mx-auto italic font-bold">SOFTWARE DEVELOPMENT DEPARTMENT</h1>
-    <div class="flex items-justify max-w-screen-lg mx-auto mb-5">
-        <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+        <h1 class="grid place-content-center mx-auto text-yellow-300 italic font-bold">SOFTWARE DEVELOPMENT DEPARTMENT</h1>
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+
+    <div class="flex items-justify max-w-screen-md mx-auto mb-5">
+        <div class="ml-10 shadow-xl card w-96 bg-base-300">
             <figure>
                 <img src="Images/back-end.jpg" class="max-w-screen-sm"/>
             </figure>
@@ -212,7 +215,7 @@
             </div>
         </div>
 
-        <div class="mt-10 ml-10 shadow-xl card w-96 h-90 bg-base-300">
+        <div class="ml-10 shadow-xl card w-96 h-90 bg-base-300">
             <figure>
                 <img src="Images/front-end.jpg" class="max-w-screen-sm">
             </figure>

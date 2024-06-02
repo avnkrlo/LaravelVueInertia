@@ -3,9 +3,10 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
 
 const items = [
-  { src: 'Images/q1.png', alt: 'Slide 1' },
-  { src: 'Images/q2.png', alt: 'Slide 2' },
-  { src: 'Images/q3.png', alt: 'Slide 3' },
+  { src: 'Images/img11.jpg', alt: 'Slide 1' },
+  { src: 'Images/img12.jpg', alt: 'Slide 2' },
+  { src: 'Images/img13.jpg', alt: 'Slide 3' },
+  { src: 'Images/img14.jpg', alt: 'Slide 4'},
 ];
 
 const currentIndex = ref(0);
@@ -56,24 +57,32 @@ defineOptions({
         </div>
     </section>
 
-    <div class="pt-10">
-        <h1 class="flex max-w-screen-xl mx-auto italic font-bold">Made of Honesty and Experience</h1>
+    <div>
+        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+          <h1 class="grid place-content-center italic font-bold mb-10 text-yellow-300">OUR HISTORY</h1>
+        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+
+        <h1 class="flex max-w-screen-xl mx-auto italic font-bold">We provide Superior Quality of Service</h1>
         <p class="flex max-w-screen-xl mx-auto text-justify">
-            Integrity is present in every level of interaction, simultaneously guaranteeing the security and protection of our clients’ valued assets. 
-            CCK also keeps its customers and businesses away from security risks, bringing confidence in service delivery.
+          The company’s work values emphasize the importance of inspired problem-solving, strategic management of operations and production, and creative solutions. 
+          Furthermore, all the services that CCK offers are founded firmly on Japanese-standard quality.
         </p>
 
-        <h1 class="flex max-w-screen-xl mx-auto italic font-bold mt-10">Industries We Serve</h1>
-        <p class="flex max-w-screen-xl mx-auto text-justify">
-            With over 30 years of experience in handling cost-effective and secure business process outsourcing services, sales and marketing, and programming and software development, 
-            CCK City Network, Inc. has been successful in engaging and innovating for an extensive variety of industries such as education, technology, real-estate, advertising, manufacturing, energy, 
-            government, healthcare, retail, telecommunication, and trading. So, whether your growth objectives demand business processes, marketing, or technology, 
-            with our industry experience and aptitude for innovation, we can make the best solutions for your business, big or small.
+        <p class="mt-5 flex max-w-screen-xl mx-auto text-justify">
+            CCK City Network, Inc. is a BPO company located in Asia with 15 branches in four countries. As an industry specialist in data entry services, 
+            CCK also conducts and owns different enterprises for software development, language education, digital marketing, and customer support. 
+            Composed of talented data analysts and scientists, seasoned customer service advocates, inspired language experts, and creative technology engineers, the company is robust, 
+            exhibiting the diversity of its capacity to serve our clients sedulously.
+        </p>
+
+        <p class="mt-5 flex max-w-screen-xl mx-auto text-justify">
+          Furthermore, CCK is compliant to industry standard as a guarantee to our clients and to their customers. 
+          Ensuring that their business is safe with us is the primary composition of our dedication.
         </p>
     </div>
 
     <div class="pt-10">
-      <h1 class="grid place-content-center">CCK is an honest business.</h1>
+      <h1 class="flex max-w-screen-xl mx-auto italic font-bold">CCK is an honest business.</h1>
       <p class="flex max-w-screen-xl mx-auto text-justify">We ensure that our clients most valued assets - their customers are protected and secured as we operate in a high standard of international service. 
         We also guarantee that their business is protected against security risk while ensuring cost-effective business bringing confidence in our service delivery.
       </p>
@@ -96,6 +105,13 @@ defineOptions({
                 :aria-current="index === currentIndex" :aria-label="'Slide ' + (index + 1)"
                 @click="goToSlide(index)"></button>
         </div>
+    </div>
+
+    <div class="bg-blue-600 mt-5">
+      <h1 class="flex max-w-screen-xl mx-auto italic font-bold">CCK is an honest business.</h1>
+      <p class="flex max-w-screen-xl mx-auto text-justify">We ensure that our clients most valued assets - their customers are protected and secured as we operate in a high standard of international service. 
+        We also guarantee that their business is protected against security risk while ensuring cost-effective business bringing confidence in our service delivery.
+      </p>
     </div>
 </template>
   

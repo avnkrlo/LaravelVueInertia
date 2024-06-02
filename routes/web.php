@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DataEntryQuoteController;
 use App\Http\Controllers\DEServicesController;
@@ -57,5 +58,9 @@ Route::middleware('guest')->group(function (){
 
     Route::controller(RecruitmentController::class)->group(function() {
         Route::get('recruitment', 'index')->name('recruitment.index');
+    });
+
+    Route::controller(CareerController::class)->group(function() {
+        Route::get('career', 'index')->name('career.index');
     });
 });
