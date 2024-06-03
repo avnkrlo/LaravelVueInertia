@@ -32,6 +32,7 @@ const goToPrivacy = () => {
                 </Link>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <!-- 1st Footer Column -->
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                     <ul class="font-medium text-gray-500 dark:text-gray-400">
@@ -43,6 +44,8 @@ const goToPrivacy = () => {
                         </li>
                     </ul>
                 </div>
+
+                <!-- 2nd Footer Column -->
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                     <ul class="font-medium text-gray-500 dark:text-gray-400">
@@ -54,6 +57,8 @@ const goToPrivacy = () => {
                         </li>
                     </ul>
                 </div>
+
+                <!-- 3rd Footer Column -->
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
                     <ul class="font-medium text-gray-500 dark:text-gray-400">
@@ -68,7 +73,7 @@ const goToPrivacy = () => {
             </div>
         </div>
 
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">All Rights Reserved</a>.
                 </span>

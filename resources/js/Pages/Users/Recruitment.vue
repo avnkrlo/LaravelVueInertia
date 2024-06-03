@@ -18,7 +18,7 @@
     </section>
 
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="grid place-content-center mx-auto italic font-bold text-yellow-300">CCK RECRUITMENT</h1>
+        <h1 class="grid place-content-center mx-auto font-bold text-yellow-300">CCK RECRUITMENT</h1>
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
     <div class="flex items-justify max-w-screen-xl mx-auto">
@@ -99,7 +99,7 @@
 
     <!-- MLD RECRUITMENT SECTION-->
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="grid place-content-center mx-auto text-yellow-300 italic font-bold">MULTILINGUAL PROCESSING DEPARTMENT</h1>
+        <h1 class="grid place-content-center mx-auto text-yellow-300 font-bold">MULTILINGUAL PROCESSING DEPARTMENT</h1>
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
     <div class="flex max-w-screen-xl mx-auto mb-5">
@@ -184,7 +184,7 @@
 
     <!-- SD RECRUITMENT SECTION -->
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="grid place-content-center mx-auto text-yellow-300 italic font-bold">SOFTWARE DEVELOPMENT DEPARTMENT</h1>
+        <h1 class="grid place-content-center mx-auto text-yellow-300 font-bold">SOFTWARE DEVELOPMENT DEPARTMENT</h1>
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
     <div class="flex items-justify max-w-screen-md mx-auto mb-5">

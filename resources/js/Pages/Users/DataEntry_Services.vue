@@ -15,7 +15,7 @@ defineOptions({
             </h1>
             
             <div class="grid place-content-end">
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-white rounded-lg hover:text-gray-900 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-yellow rounded-lg hover:text-yellow-300 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                     GET QUOTE
                 </a>  
             </div>
@@ -119,6 +119,62 @@ defineOptions({
                 <div class="items-center text-justify card-body">
                     <h2 class="card-title">AI Annotation</h2>
                     <p>We offer tagging all forms of data that can be texts, audios, videos, and/or images using advanced AI annotation tools.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-10 pb-5 bg-blue-800 h-128 flex flex-col justify-center items-center shadow-2xl">
+        <div class="flex items-justify max-w-screen-xl mx-auto">
+            <div class="mt-5 ml-10 card w-96 bg-blue-800 text-white">
+                <!-- <figure class="px-10 pt-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16">
+                        <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/>
+                        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/>
+                    </svg>
+                </figure> -->
+                    
+                <div class="card-body">
+                    <h2 class="card-title">High Quality, High Security</h2>
+                    <p>● Certified by international standards:ISO9001 (Quality) & ISO27001 (Security).</p>
+                    <p>● Presence of resident Japanese management.</p>
+                    <p>● Various skill upgrade programs available including Japanese language.</p>
+                </div>
+            </div>
+
+            <div class="mt-5 ml-10 card w-96 bg-blue-800 border-white text-white">
+                <!-- <figure class="px-10 pt-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16">
+                        <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/>
+                        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/>
+                    </svg>
+                </figure> -->
+                    
+                <div class="card-body">
+                    <h2 class="card-title">High Reliability</h2>
+                    <p>● Full back-up by in-the-building electric generator.</p>
+                    <p>● All the terminals are UPS integrated.</p>
+                    <p>● Multiple transmission lines (instant switch during system failure.)</p>
+                    <p>● Integration of security cameras and room entry and exit management system.</p>
+                    <p>● Private information protection management system.</p>
+                    <p>● Internal rules conforming to JISQ15001:2006.</p>
+                </div>
+            </div>
+
+            <div class="mt-5 ml-10 card w-96 bg-blue-800 border-white text-white">
+                <!-- <figure class="px-10 pt-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16">
+                        <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/>
+                        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/>
+                    </svg>
+                </figure> -->
+
+                <div class="card-body">
+                    <h2 class="card-title">High Peformance</h2>
+                    <p>● Data processing 24hrs/365 days/480 people.</p>
+                    <p>● Data processing US/Europe and Asia regions.</p>
+                    <p>● Processing of ledgers (fixed form) with Chinese characters.</p>
+                    <p>● Verifying or comparing system available.</p>
                 </div>
             </div>
         </div>

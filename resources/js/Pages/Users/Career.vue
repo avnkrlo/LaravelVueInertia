@@ -31,7 +31,7 @@
 
     <div class="pt-5 pb-5 flex max-w-screen-sm mx-auto">
         <figure class="relative max-w-sm cursor-pointer filter blur-sm hover:blur-none">
-            <img class="rounded-lg" src="Images/life1.jpg" alt="image description">
+            <img class="rounded-lg h-64" src="Images/life1.jpg" alt="image description">
 
             <figcaption class="absolute px-4 text-lg text-white bottom-20">
                 <p>Do you want to get notified when a new component is added to Flowbite?</p>
@@ -57,7 +57,7 @@
         </figure>
 
         <figure class="ml-5 relative max-w-sm cursor-pointer filter blur-sm hover:blur-none">
-            <img class="rounded-lg" src="Images/life4.jpg" alt="image description">
+            <img class="rounded-lg h-64" src="Images/life4.jpg" alt="image description">
 
             <figcaption class="absolute px-4 text-lg text-white bottom-20">
                 <p>Do you want to get notified when a new component is added to Flowbite?</p>
@@ -65,9 +65,9 @@
         </figure>
     </div>
 
-    <div class="pt-5 pb-5">
+    <div>
         <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-            <h1 class="grid place-content-center text-yellow-300 italic font-bold">DREAM BIG. SOAR HIGH. BE QUALIFIED.</h1>
+            <h1 class="grid place-content-center text-yellow-300 font-bold">DREAM BIG. SOAR HIGH. BE QUALIFIED.</h1>
         <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
         <p class="flex max-w-screen-xl mx-auto text-justify">

@@ -39,7 +39,7 @@ defineOptions({
         </p>
 
         <!-- First Set of Offer Cards -->
-        <div class="flex items-center max-w-screen-md mx-auto">
+        <div class="flex items-justify max-w-screen-md mx-auto">
             <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
                 <figure class="px-10 pt-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="55" height="100" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
@@ -70,8 +70,8 @@ defineOptions({
         </div>
 
         <!-- Second Set of Offer Cards -->
-        <div class="flex items-center max-w-screen-md mx-auto mt-10">
-            <div class="mt-5 ml-10 shadow-xl card w-96 bg-base-300">
+        <div class="flex items-justify max-w-screen-md mx-auto mb-10">
+            <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
                 <figure class="px-10 pt-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="55" height="110" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
                         <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
@@ -85,7 +85,7 @@ defineOptions({
                 </div>
             </div>
 
-            <div class="mt-5 ml-10 shadow-xl card w-96 bg-base-300">
+            <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
                 <figure class="px-10 pt-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="55" height="90" fill="currentColor" class="bi bi-file-earmark-check" viewBox="0 0 16 16">
                         <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>

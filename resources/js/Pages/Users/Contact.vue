@@ -11,5 +11,15 @@
             </h1>
         </div>
     </section>
+
+    <div class="pt-10 pb-10">
+        <h1 class="grid place-content-center italic font-bold">Get in touch with our amazing team, and let's talk strategy!</h1>
+        
+    </div>
+
+    <h1 class="grid place-content-center italic font-bold">Office Headquarters</h1>
+    <div class="pb-10 bg-blue-600">
+        
+    </div>
 </template>
   

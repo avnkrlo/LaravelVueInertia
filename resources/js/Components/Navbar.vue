@@ -23,7 +23,7 @@ const hideQuoteDropdown = () => {
 </script>
 
 <template>
-    <nav class="fixed top-0 z-20 w-full bg-white border-b border-gray-200 dark:bg-gray-900 start-0 dark:border-gray-600">
+    <nav class="fixed top-0 z-20 w-full bg-white border-b border-gray-200 dark:bg-gray-900 start-0 dark:border-yellow-300">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
             <Link :href="route('index')" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="Images/cck.png" class="h-8"/>

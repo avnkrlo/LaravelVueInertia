@@ -5,8 +5,6 @@ import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
 const items = [
   { src: 'Images/img11.jpg', alt: 'Slide 1' },
   { src: 'Images/img12.jpg', alt: 'Slide 2' },
-  { src: 'Images/img13.jpg', alt: 'Slide 3' },
-  { src: 'Images/img14.jpg', alt: 'Slide 4'},
 ];
 
 const currentIndex = ref(0);
@@ -59,59 +57,71 @@ defineOptions({
 
     <div>
         <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-          <h1 class="grid place-content-center italic font-bold mb-10 text-yellow-300">OUR HISTORY</h1>
+          <h1 class="grid place-content-center font-bold mb-10 text-yellow-300">OUR BUSINESS</h1>
         <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
-        <h1 class="flex max-w-screen-xl mx-auto italic font-bold">We provide Superior Quality of Service</h1>
+        <h1 class="flex max-w-screen-xl mx-auto italic font-bold">Made of Honesty and Experience</h1>
         <p class="flex max-w-screen-xl mx-auto text-justify">
-          The company’s work values emphasize the importance of inspired problem-solving, strategic management of operations and production, and creative solutions. 
-          Furthermore, all the services that CCK offers are founded firmly on Japanese-standard quality.
+          Integrity is present in every level of interaction, simultaneously guaranteeing the security and protection of our clients’ valued assets. 
+          CCK also keeps its customers and businesses away from security risks, bringing confidence in service delivery.
         </p>
+    </div>
+    
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+      <div class="flex items-center carousel max-w-screen-lg h-64 bg-gray-600 text-black">
+        <div id="slide1" class="carousel-item relative w-full flex justify-center items-center">
+          <div>
+            <p class="text-2xl">"Invested and inspired, that's what we are."</p>
+            <p class="flex text-md">The staggering brain power of our teams is composed of skilled and experienced employees, 
+              consistently available to produce and perform.
+            </p>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full flex justify-center items-center">
+          <div>
+            <p class="text-2xl">"How can we help you today?"</p>
+            <p class="flex text-md">The services offered by CCK City Network, Inc. rest on the values of quality, accuracy, and data security.  
+              The company understands the complex structure of sustaining and growing a business that relies on  the superior quality of services it needs, 
+              the accuracy of the output it requires, and the security of data and information it owns. 
+            </p>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
-        <p class="mt-5 flex max-w-screen-xl mx-auto text-justify">
-            CCK City Network, Inc. is a BPO company located in Asia with 15 branches in four countries. As an industry specialist in data entry services, 
-            CCK also conducts and owns different enterprises for software development, language education, digital marketing, and customer support. 
-            Composed of talented data analysts and scientists, seasoned customer service advocates, inspired language experts, and creative technology engineers, the company is robust, 
-            exhibiting the diversity of its capacity to serve our clients sedulously.
-        </p>
+    <div>
+      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+          <h1 class="grid place-content-center font-bold mb-10 text-yellow-300">INDUSTRIES WE SERVE</h1>
+        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
-        <p class="mt-5 flex max-w-screen-xl mx-auto text-justify">
-          Furthermore, CCK is compliant to industry standard as a guarantee to our clients and to their customers. 
-          Ensuring that their business is safe with us is the primary composition of our dedication.
+        <p class="flex max-w-screen-xl mx-auto text-justify">
+          With over 30 years of experience in handling cost-effective and secure business process outsourcing services, sales and marketing, and programming and software development, 
+          CCK City Network, Inc. has been successful in engaging and innovating for an extensive variety of industries such as education, technology, real-estate, advertising, manufacturing, 
+          energy, government, healthcare, retail, telecommunication, and trading. So, whether your growth objectives demand business processes, marketing, or technology, 
+          with our industry experience and aptitude for innovation, we can make the best solutions for your business, big or small.
         </p>
     </div>
 
-    <div class="pt-10">
-      <h1 class="flex max-w-screen-xl mx-auto italic font-bold">CCK is an honest business.</h1>
-      <p class="flex max-w-screen-xl mx-auto text-justify">We ensure that our clients most valued assets - their customers are protected and secured as we operate in a high standard of international service. 
-        We also guarantee that their business is protected against security risk while ensuring cost-effective business bringing confidence in our service delivery.
-      </p>
+    <div>
+      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+          <h1 class="grid place-content-center font-bold mb-10 text-yellow-300">BLOGS</h1>
+        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
     </div>
 
-    <!-- CAROUSEL -->
-    <div id="indicators-carousel" class="relative w-full pt-10" @mouseover="pause" @mouseleave="start">
-        <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-        <!-- Carousel items -->
-        <div v-for="(item, index) in items" :key="index" class="absolute w-full h-full"
-            :class="{'hidden': index !== currentIndex, 'block': index === currentIndex, 'duration-700 ease-in-out': true}">
-            <img :src="item.src" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" :alt="item.alt">
-        </div>
-        
-        </div>
-        <!-- Slider indicators -->
-        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 rtl:space-x-reverse bottom-5 left-1/2">
-        <button v-for="(item, index) in items" :key="index" type="button" class="w-3 h-3 rounded-full"
-                :aria-current="index === currentIndex" :aria-label="'Slide ' + (index + 1)"
-                @click="goToSlide(index)"></button>
-        </div>
-    </div>
-
-    <div class="bg-blue-600 mt-5">
-      <h1 class="flex max-w-screen-xl mx-auto italic font-bold">CCK is an honest business.</h1>
-      <p class="flex max-w-screen-xl mx-auto text-justify">We ensure that our clients most valued assets - their customers are protected and secured as we operate in a high standard of international service. 
-        We also guarantee that their business is protected against security risk while ensuring cost-effective business bringing confidence in our service delivery.
+    
+    <div class="pb-10 bg-blue-600 h-64 flex flex-col justify-center items-center">
+      <h1 class="text-white font-bold">Stop there, we have something for you.</h1>
+      <p class="max-w-screen-xl mx-auto text-justify text-white">
+        Join our family and discover that working does not have to be stressful and demanding. 
+        We treat each other in ways that foster healthy personal and professional spaces that we are always excited to have and experience.
       </p>
     </div>
 </template>
-  
