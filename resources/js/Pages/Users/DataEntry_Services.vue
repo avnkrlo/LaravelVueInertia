@@ -1,9 +1,14 @@
 <script setup>
+import { router } from '@inertiajs/vue3';
 import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
 
 defineOptions({
     layout: AuthenticatedLayout,
 });
+
+const goToDEQuote = () => {
+    router.get('de-quote');
+}
 </script>
 
 <template>
@@ -15,9 +20,9 @@ defineOptions({
             </h1>
             
             <div class="grid place-content-end">
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-yellow rounded-lg hover:text-yellow-300 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                <button @click="goToDEQuote()" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-yellow rounded-lg hover:text-yellow-300 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                     GET QUOTE
-                </a>  
+                </button>  
             </div>
         </div>
     </section>

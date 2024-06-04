@@ -46,12 +46,6 @@ defineOptions({
             <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
                 It takes more than interest, we have plans and strategies specifically for your business needs.
             </h1>
-            
-            <div class="grid place-content-end">
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-white rounded-lg hover:text-gray-900 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                    GET QUOTE
-                </a>  
-            </div>
         </div>
     </section>
 
@@ -68,11 +62,11 @@ defineOptions({
     </div>
     
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-      <div class="flex items-center carousel max-w-screen-lg h-64 bg-gray-600 text-black">
+      <div class="flex items-center carousel max-w-screen-lg h-64 bg-gray-600 text-black mx-auto">
         <div id="slide1" class="carousel-item relative w-full flex justify-center items-center">
           <div>
-            <p class="text-2xl">"Invested and inspired, that's what we are."</p>
-            <p class="flex text-md">The staggering brain power of our teams is composed of skilled and experienced employees, 
+            <p class="text-2xl pl-20">"Invested and inspired, that's what we are."</p>
+            <p class="flex text-md pl-20 pr-20">The staggering brain power of our teams is composed of skilled and experienced employees, 
               consistently available to produce and perform.
             </p>
           </div>

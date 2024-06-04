@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
@@ -18,6 +19,10 @@ use App\Http\Controllers\SDServicesController;
 Route::middleware('guest')->group(function (){
     Route::controller(IndexController::class)->group(function(){
         Route::get('/', 'index')->name('index');
+    });
+
+    Route::controller(AboutController::class)->group(function () {
+        Route::get('about', 'index')->name('about.index');
     });
 
     Route::controller(DEServicesController::class)->group(function() {

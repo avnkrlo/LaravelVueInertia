@@ -4,21 +4,21 @@
 <template>
     <!-- JUMBOTRON -->
     <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
-        <div class="max-w-screen-xl px-4 py-24 mx-auto text-center lg:py-56">
-            <h3 class="mb-4 text-2xl font-extrabold leading-none tracking-tight text-white">
+        <div class="max-w-screen-xl mx-auto lg:py-56">
+            <h1 class="mb-5 text-2xl leading-none tracking-tight text-white">
                 We have many job offers waiting for you.
-            </h3>
-            <h1 class="mb-4 mt-10 text-6xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
-                START YOUR CAREER HERE AT CCK!
             </h1>
-            <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white mt-10">
+            <p class="text-white text-6xl uppercase font-bold">
+                Start your career here at CCK!
+            </p>
+            <p class="text-white text-5xl mt-5">
                 Your Dream Job Might Be Waiting For You.
-            </h2>
+            </p>
         </div>
     </section>
 
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="grid place-content-center mx-auto font-bold text-yellow-300">CCK RECRUITMENT</h1>
+        <h1 class="grid place-content-center mx-auto font-bold text-yellow-300 text-4xl uppercase">CCK Recruitment</h1>
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
     <div class="flex items-justify max-w-screen-xl mx-auto">
@@ -237,5 +237,13 @@
             </div>
         </div>
     </div>
+
+    <div class=" bg-blue-800 h-64 flex flex-col justify-center items-center">
+      <h1 class="text-white font-bold text-5xl">Dream Big. Soar High. Make your dreams come true.</h1>
+      <p class="max-w-screen-xl mx-auto text-justify text-white text-2xl mt-5">
+        Here are CCK, everything is possible.
+      </p>
+    </div>
+    <hr class=" border-yellow-300 sm:mx-auto dark:border-yellow-300" />
 </template>
   
