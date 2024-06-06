@@ -1,5 +1,6 @@
 <script setup>
 import { router } from '@inertiajs/vue3';
+import { ref, onMounted, onUnmounted } from 'vue';
 import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
 
 defineOptions({
@@ -9,23 +10,70 @@ defineOptions({
 const goToMLDQuote = () => {
     router.get('mld-quote');
 }
+
+const btnBackToTop = ref(null);
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const handleScroll = () => {
+  if (window.scrollY > 100) {
+    btnBackToTop.value.classList.remove('hidden');
+  } else {
+    btnBackToTop.value.classList.add('hidden');
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <template>
     <!-- JUMBOTRON -->
     <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
-        <div class="max-w-screen-xl px-4 py-24 mx-auto text-center lg:py-56">
-            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
-                It takes more than interest, we have plans and strategies specifically for your business needs.
+        <div class="max-w-screen-xl px-4 py-24 mx-auto lg:py-56">
+            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white uppercase md:text-5xl lg:text-6xl">
+                It’s all about ACCURACY,QUALITY, and SECURITY
             </h1>
+            <p class="text-4xl text-white">
+                CCK's business is based on Transparency, Honesty, andValues Driven Partnership
+            </p>
             
             <div class="grid place-content-end">
-                <button @click="goToMLDQuote()" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-white rounded-lg hover:text-gray-900 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                <button @click="goToMLDQuote()" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border rounded-lg border-yellow hover:text-yellow-300 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                     GET QUOTE
                 </button>  
             </div>
         </div>
     </section>
+
+    <!-- Back to top button -->
+    <button
+        type="button"
+        @click="scrollToTop"
+        class="!fixed bottom-5 end-5 hidden rounded-full bg-orange-600 p-3 text-xs font-medium uppercase leading-tight text-white border border-orange-300 shadow-md transition duration-150 ease-in-out hover:bg-transparent hover:shadow-lg hover:text-orange-300 focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-600 active:shadow-lg"
+        id="btn-back-to-top"
+        ref="btnBackToTop">
+        <span class="[&>svg]:w-4">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor">
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </span>
+    </button>
 
     <div class="pt-10 mb-10">
         <h1 class="flex max-w-screen-xl mx-auto italic font-bold">What we do</h1>
@@ -36,7 +84,7 @@ const goToMLDQuote = () => {
             English language for casual conversations, school qualifications, and business requirements.
         </p>
 
-        <h1 class="flex max-w-screen-xl mx-auto italic font-bold mt-10">What we offer</h1>
+        <h1 class="flex max-w-screen-xl mx-auto mt-10 italic font-bold">What we offer</h1>
         <p class="flex max-w-screen-xl mx-auto text-justify">
             Housing experienced teams of English language professionals, both teachers and researchers, 
             to serve to the public’s growing demand to learn the English language and all its practical applications in school and in the business. 
@@ -44,7 +92,7 @@ const goToMLDQuote = () => {
         </p>
 
         <!-- First Set of Offer Cards -->
-        <div class="flex items-justify max-w-screen-md mx-auto">
+        <div class="flex max-w-screen-md mx-auto items-justify">
             <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
                 <figure class="px-10 pt-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="55" height="100" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
@@ -75,7 +123,7 @@ const goToMLDQuote = () => {
         </div>
 
         <!-- Second Set of Offer Cards -->
-        <div class="flex items-justify max-w-screen-md mx-auto mb-10">
+        <div class="flex max-w-screen-md mx-auto mb-10 items-justify">
             <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
                 <figure class="px-10 pt-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="55" height="110" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
@@ -106,9 +154,10 @@ const goToMLDQuote = () => {
         </div>
     </div>
 
-    <div class="mb-10 pb-5 bg-blue-800 h-128 flex flex-col justify-center items-center shadow-2xl">
-        <div class="flex items-justify max-w-screen-xl mx-auto">
-            <div class="mt-5 ml-10 card w-96 bg-blue-800 text-white">
+    <!-- Service Quality -->
+    <div class="flex flex-col items-center justify-center mb-10 bg-blue-800 shadow-2xl h-128">
+        <div class="flex max-w-screen-xl mx-auto items-justify">
+            <div class="mt-5 ml-10 text-white bg-blue-800 card w-96">
                 <!-- <figure class="px-10 pt-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16">
                         <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/>
@@ -117,14 +166,14 @@ const goToMLDQuote = () => {
                 </figure> -->
                     
                 <div class="card-body">
-                    <h2 class="card-title">High Quality, High Security</h2>
+                    <h2 class="text-2xl text-orange-300 card-title">High Quality, High Security</h2>
                     <p>● Certified by international standards:ISO9001 (Quality) & ISO27001 (Security).</p>
                     <p>● Presence of resident Japanese management.</p>
                     <p>● Various skill upgrade programs available including Japanese language.</p>
                 </div>
             </div>
 
-            <div class="mt-5 ml-10 card w-96 bg-blue-800 border-white text-white">
+            <div class="mt-5 ml-10 text-white bg-blue-800 border-white card w-96">
                 <!-- <figure class="px-10 pt-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16">
                         <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/>
@@ -133,7 +182,7 @@ const goToMLDQuote = () => {
                 </figure> -->
                     
                 <div class="card-body">
-                    <h2 class="card-title">High Reliability</h2>
+                    <h2 class="text-2xl text-orange-300 card-title">High Reliability</h2>
                     <p>● Full back-up by in-the-building electric generator.</p>
                     <p>● All the terminals are UPS integrated.</p>
                     <p>● Multiple transmission lines (instant switch during system failure.)</p>
@@ -143,7 +192,7 @@ const goToMLDQuote = () => {
                 </div>
             </div>
 
-            <div class="mt-5 ml-10 card w-96 bg-blue-800 border-white text-white">
+            <div class="mt-5 ml-10 text-white bg-blue-800 border-white card w-96">
                 <!-- <figure class="px-10 pt-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16">
                         <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/>
@@ -152,7 +201,7 @@ const goToMLDQuote = () => {
                 </figure> -->
 
                 <div class="card-body">
-                    <h2 class="card-title">High Peformance</h2>
+                    <h2 class="text-2xl text-orange-300 card-title">High Peformance</h2>
                     <p>● Data processing 24hrs/365 days/480 people.</p>
                     <p>● Data processing US/Europe and Asia regions.</p>
                     <p>● Processing of ledgers (fixed form) with Chinese characters.</p>
