@@ -17,6 +17,7 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "@fawmi/vue-google-maps": "^0.9.79",
         "@flaticon/flaticon-uicons": "^3.2.1",
         "@fortawesome/fontawesome-svg-core": "^6.5.2",
         "@fortawesome/free-brands-svg-icons": "^6.5.2",

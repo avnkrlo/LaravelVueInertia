@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import TextField from '../../Components/TextField.vue';
 
 const btnBackToTop = ref(null);
 
@@ -22,6 +23,56 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
+
+const nameComponent = ref({
+    type: 'text',
+    placeholder: 'Name',
+    label: 'Name',
+    errorMessage: null,
+    pattern: '',
+    minLength: null,
+    maxLength: null,
+});
+
+const businessEmailComponent = ref({
+    type: 'email',
+    placeholder: 'Email',
+    label: 'Email',
+    errorMessage: null,
+    pattern: '^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+    minLength: null,
+    maxLength: null,
+});
+
+const contactComponent = ref({
+    type: 'number',
+    placeholder: 'Contact Number',
+    label: 'Contact Number',
+    errorMessage: null,
+    pattern: '',
+    minLength: null,
+    maxLength: null,
+});
+
+const descriptionComponent = ref({
+    type: 'text',
+    placeholder: 'Project Description',
+    label: 'Description',
+    errorMessage: null,
+    pattern: '',
+    minLength: null,
+    maxLength: null,
+});
+
+const isFormValid = ref (true);
+
+const validateForm = (isValid) => {
+    isFormValid.value = isValid
+}
+
+const formQuoteSubmit = () => {
+
+}
 </script>
 
 <template>
@@ -35,30 +86,44 @@ onUnmounted(() => {
     </section>
 
     <!-- Back to top button -->
-    <button
-        type="button"
-        @click="scrollToTop"
-        class="!fixed bottom-5 end-5 hidden rounded-full bg-orange-600 p-3 text-xs font-medium uppercase leading-tight text-white border border-orange-300 shadow-md transition duration-150 ease-in-out hover:bg-transparent hover:shadow-lg hover:text-orange-300 focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-600 active:shadow-lg"
-        id="btn-back-to-top"
-        ref="btnBackToTop">
+    <button type="button" @click="scrollToTop" id="btn-back-to-top" ref="btnBackToTop" class="!fixed bottom-5 end-5 hidden rounded-full bg-orange-600 p-3 text-xs font-medium uppercase leading-tight text-white border border-orange-300 shadow-md transition duration-150 ease-in-out hover:bg-transparent hover:shadow-lg hover:text-orange-300 focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-600 active:shadow-lg">
         <span class="[&>svg]:w-4">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="3"
-                stroke="currentColor">
-                <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
             </svg>
         </span>
     </button>
 
-    <div class="pt-10 pb-10">
-        <h1 class="grid italic font-bold place-content-center">Get in touch with our amazing team, and let's talk strategy!</h1>
+    <div>
+        <h1 class="grid mt-10 mb-5 text-2xl font-bold text-white uppercase place-content-center">Get in touch with our amazing team, and let's talk strategy!</h1>
         
+        <form @submit.prevent="form.post('/submit')" class="grid place-content-center">
+            <text-field 
+                v-model="name" 
+                :component-data="nameComponent"
+                @form-validate="validateForm"
+            />
+
+            <text-field 
+                v-model="email" 
+                :component-data="businessEmailComponent"
+                @form-validate="validateForm"
+            />
+
+            <text-field 
+                v-model="contact" 
+                :component-data="contactComponent"
+                @form-validate="validateForm"
+            />
+
+            <text-field 
+                v-model="description" 
+                :component-data="descriptionComponent"
+                @form-validate="validateForm"
+            />
+
+            <button @click="formQuoteSubmit()">Submit</button>
+        </form>
     </div>
 
     <h1 class="grid mt-10 mb-5 text-5xl font-bold text-yellow-300 uppercase place-content-center">Office Headquarters</h1>
