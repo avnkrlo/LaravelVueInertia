@@ -9,6 +9,7 @@ import  Toast  from "vue-toastification";
 import AuthenticatedLayout from '../js/Layouts/AuthenticatedLayout.vue';
 // Import the CSS or use your own!
 import "vue-toastification/dist/index.css";
+import PrimeVue from 'primevue/config';
 
 createInertiaApp({
   resolve: name => {
@@ -23,6 +24,7 @@ createInertiaApp({
       .use(plugin)
       .use(Toast)
       .use(ZiggyVue)
+      .use(PrimeVue)
       .mount(el)
   },
 });

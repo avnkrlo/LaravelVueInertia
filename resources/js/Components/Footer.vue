@@ -25,11 +25,17 @@ const goToPrivacy = () => {
     <footer class="bg-white dark:bg-gray-900">
         <div class="w-full max-w-screen-xl p-4 py-6 mx-auto lg:py-8">
             <div class="md:flex md:justify-between">
-            <div class="mb-6 md:mb-0">
+            <div class="mb-6 md:mb-0 flex flex-col">
                 <Link :href="route('index')" class="flex items-center">
                     <img src="Images/cck_logo.png" class="h-25 me-3" alt="FlowBite Logo" />
-                    <span class="self-center font-semibold whitespace-nowrap dark:text-white">CCK City Network, Inc.</span>
                 </Link>
+                <p class="">
+                    CCK City Network, Inc.
+                </p>
+                <p class="">
+                    3502 One San Miguel Avenue Condominium, San Miguel Avenue, Ortigas Center, Pasig City
+                    +632-53100435
+                </p>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <!-- 1st Footer Column -->
