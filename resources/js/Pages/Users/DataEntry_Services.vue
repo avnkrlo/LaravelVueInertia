@@ -46,7 +46,7 @@ onUnmounted(() => {
                 It’s all about ACCURACY,QUALITY, and SECURITY
             </h1>
             <p class="text-4xl text-white">
-                CCK's business is based on Transparency, Honesty, andValues Driven Partnership
+                CCK's business is based on Transparency, Honesty, and Values Driven Partnership
             </p>
             
             <div class="grid place-content-end">

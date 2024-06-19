@@ -23,23 +23,34 @@ const goToPrivacy = () => {
 <template>
     <!-- FOOTER -->
     <footer class="bg-white dark:bg-gray-900">
-        <div class="w-full max-w-screen-xl p-4 py-6 mx-auto lg:py-8">
+        <div class="w-full max-w-screen-xl px-2 py-6 mx-auto lg:py-8">
             <div class="md:flex md:justify-between">
-            <div class="mb-6 md:mb-0 flex flex-col">
+            <div class="flex flex-row">
                 <Link :href="route('index')" class="flex items-center">
                     <img src="Images/cck_logo.png" class="h-25 me-3" alt="FlowBite Logo" />
                 </Link>
-                <p class="">
-                    CCK City Network, Inc.
-                </p>
-                <p class="">
-                    3502 One San Miguel Avenue Condominium, San Miguel Avenue, Ortigas Center, Pasig City
-                    +632-53100435
+                <div class="flex flex-col w-64">
+                    <div>
+                        <p class="mb-3 text-2xl font-bold">
+                            CCK City Network, Inc.
+                        </p>
+
+                        <p class="mb-3">
+                            3502 One San Miguel Avenue Condominium, San Miguel Avenue, Ortigas Center, Pasig City
+                        </p>
+
+                        <p>
+                            +632-53100435
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    
                 </p>
             </div>
-            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-1">
                 <!-- 1st Footer Column -->
-                <div>
+                <!-- <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                     <ul class="font-medium text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
@@ -49,10 +60,10 @@ const goToPrivacy = () => {
                             <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
                 <!-- 2nd Footer Column -->
-                <div>
+                <!-- <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                     <ul class="font-medium text-gray-500 dark:text-gray-400">
                         <li class="mb-4">
@@ -62,7 +73,7 @@ const goToPrivacy = () => {
                             <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
                 <!-- 3rd Footer Column -->
                 <div>

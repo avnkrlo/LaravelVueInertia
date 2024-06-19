@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('data_entry', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
+            $table->string('full_name');
+            $table->string('business_email');
             $table->string('country');
-            $table->integer('contact');
+            $table->integer('primary_contact');
+            $table->string('file_name');
+            $table->string('path');
+            $table->string('message');
             $table->timestamps();
         });
     }

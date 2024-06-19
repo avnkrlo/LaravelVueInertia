@@ -41,9 +41,9 @@ Route::middleware('guest')->group(function (){
         Route::get('de-quote', 'index')->name('dequote.index');
     });
 
-    Route::controller(MLDQuoteController::class)->group(function() {
-        Route::get('mld-quote', 'index')->name('mldquote.index');
-    });
+    // Route::controller(MLDQuoteController::class)->group(function() {
+    //     Route::get('mld-quote', 'index')->name('mldquote.index');
+    // });
 
     Route::controller(SDQuoteController::class)->group(function() {
         Route::get('sd-quote', 'index')->name('sdquote.index');

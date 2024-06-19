@@ -42,13 +42,13 @@ onUnmounted(() => {
                 It’s all about ACCURACY,QUALITY, and SECURITY
             </h1>
             <p class="text-4xl text-white">
-                CCK's business is based on Transparency, Honesty, andValues Driven Partnership
+                CCK's business is based on Transparency, Honesty, and Values Driven Partnership
             </p>
             
             <div class="grid place-content-end">
-                <button @click="goToMLDQuote()" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border rounded-lg border-yellow hover:text-yellow-300 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                <!-- <button @click="goToMLDQuote()" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border rounded-lg border-yellow hover:text-yellow-300 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                     GET QUOTE
-                </button>  
+                </button>   -->
             </div>
         </div>
     </section>
