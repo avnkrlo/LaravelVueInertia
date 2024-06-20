@@ -1,0 +1,22 @@
+{
+  "\u0000plugin-vue:export-helper": [],
+  "resources/js/Components/Footer.vue": [],
+  "resources/js/Components/Navbar.vue": [],
+  "resources/js/Layouts/AuthenticatedLayout.vue": [],
+  "resources/js/Pages/Users/About.vue": [],
+  "resources/js/Pages/Users/Blog.vue": [],
+  "resources/js/Pages/Users/Career.vue": [],
+  "resources/js/Pages/Users/Contact.vue": [],
+  "resources/js/Pages/Users/DataEntryQuote.vue": [],
+  "resources/js/Pages/Users/DataEntry_Services.vue": [],
+  "resources/js/Pages/Users/Index.vue": [],
+  "resources/js/Pages/Users/MLD_Quote.vue": [],
+  "resources/js/Pages/Users/MLD_Services.vue": [],
+  "resources/js/Pages/Users/PrivacyPolicy.vue": [],
+  "resources/js/Pages/Users/Recruitment.vue": [],
+  "resources/js/Pages/Users/SD_Quote.vue": [],
+  "resources/js/Pages/Users/SoftDev_Services.vue": [],
+  "resources/js/ssr.js": [],
+  "resources/js/ziggy.js": [],
+  "vendor/tightenco/ziggy/dist/index.js": []
+}

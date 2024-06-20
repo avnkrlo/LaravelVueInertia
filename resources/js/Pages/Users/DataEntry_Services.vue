@@ -80,14 +80,14 @@ onUnmounted(() => {
     </button>
 
     <div class="pt-10 pb-10">
-        <h1 class="flex max-w-screen-xl mx-auto italic font-bold">What we do</h1>
+        <h1 class="flex max-w-screen-xl mx-auto text-4xl italic font-bold">What we do</h1>
         <p class="flex max-w-screen-xl mx-auto text-justify">
             At the center of critical operations of a business is the sets of recorded data that can determine important business decisions, and these are details produced by successful and accurate data entry activities. 
             The diligence necessary to maintain and to update the information for business essentials like invoices or databases are quite consuming, 
             and because of this CCK City Network, Inc. offers six data entry services that can help.
         </p>
 
-        <h1 class="flex max-w-screen-xl mx-auto mt-10 italic font-bold">What we offer</h1>
+        <h1 class="flex max-w-screen-xl mx-auto mt-10 text-4xl italic font-bold">What we offer</h1>
         <p class="flex max-w-screen-xl mx-auto text-justify">
             Founded on the Japanese standards of accuracy, consistency, quality, and security, the data entry services we offer 
             have guaranteed satisfaction and have built long-term business trust with our clients. 
@@ -193,7 +193,7 @@ onUnmounted(() => {
                 </figure> -->
                     
                 <div class="card-body">
-                    <h2 class="text-2xl text-orange-300 card-title">High Quality, High Security</h2>
+                    <h2 class="text-3xl text-orange-300 card-title">High Quality, High Security</h2>
                     <p>● Certified by international standards:ISO9001 (Quality) & ISO27001 (Security).</p>
                     <p>● Presence of resident Japanese management.</p>
                     <p>● Various skill upgrade programs available including Japanese language.</p>
@@ -209,7 +209,7 @@ onUnmounted(() => {
                 </figure> -->
                     
                 <div class="card-body">
-                    <h2 class="text-2xl text-orange-300 card-title">High Reliability</h2>
+                    <h2 class="text-3xl text-orange-300 card-title">High Reliability</h2>
                     <p>● Full back-up by in-the-building electric generator.</p>
                     <p>● All the terminals are UPS integrated.</p>
                     <p>● Multiple transmission lines (instant switch during system failure.)</p>
@@ -228,7 +228,7 @@ onUnmounted(() => {
                 </figure> -->
 
                 <div class="card-body">
-                    <h2 class="text-2xl text-orange-300 card-title">High Peformance</h2>
+                    <h2 class="text-3xl text-orange-300 card-title">High Peformance</h2>
                     <p>● Data processing 24hrs/365 days/480 people.</p>
                     <p>● Data processing US/Europe and Asia regions.</p>
                     <p>● Processing of ledgers (fixed form) with Chinese characters.</p>
@@ -243,7 +243,7 @@ onUnmounted(() => {
     </div>
 
     <div class="flex flex-col items-center justify-center h-64 mt-10 bg-blue-800 ">
-        <h1 class="text-6xl font-bold text-white">Connect With Us!</h1>
+        <h1 class="text-5xl font-bold text-white">Connect With Us!</h1>
         
         <div class="grid mt-5 place-content-end">
             <button @click="goToContact()" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">

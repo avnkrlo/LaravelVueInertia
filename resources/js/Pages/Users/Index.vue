@@ -89,8 +89,8 @@ defineOptions({
           <h1 class="grid mx-auto text-4xl font-bold text-yellow-300 uppercase place-content-center">OUR BUSINESS</h1>
         <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
-        <h1 class="grid mb-5 text-4xl font-bold place-content-center">Made of Honesty and Experience</h1>
-        <p class="flex max-w-screen-xl mx-auto text-xl text-justify">
+        <h1 class="grid mb-5 text-4xl font-bold text-white place-content-center">Made of Honesty and Experience</h1>
+        <p class="flex max-w-screen-xl mx-auto text-xl text-justify text-white">
           Integrity is present in every level of interaction, simultaneously guaranteeing the security and protection of our clients’ valued assets. 
           CCK also keeps its customers and businesses away from security risks, bringing confidence in service delivery.
         </p>
@@ -131,7 +131,7 @@ defineOptions({
           <h1 class="grid mx-auto text-4xl font-bold text-yellow-300 uppercase place-content-center">INDUSTRIES WE SERVE</h1>
         <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
-        <p class="flex max-w-screen-xl mx-auto text-xl text-justify">
+        <p class="flex max-w-screen-xl mx-auto text-xl text-justify text-white">
           With over 30 years of experience in handling cost-effective and secure business process outsourcing services, sales and marketing, and programming and software development, 
           CCK City Network, Inc. has been successful in engaging and innovating for an extensive variety of industries such as education, technology, real-estate, advertising, manufacturing, 
           energy, government, healthcare, retail, telecommunication, and trading. So, whether your growth objectives demand business processes, marketing, or technology, 

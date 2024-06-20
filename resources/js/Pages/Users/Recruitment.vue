@@ -144,7 +144,7 @@ onUnmounted(() => {
 
     <!-- MLD RECRUITMENT SECTION-->
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="grid mx-auto font-bold text-yellow-300 place-content-center">MULTILINGUAL PROCESSING DEPARTMENT</h1>
+        <h1 class="grid mx-auto text-2xl font-bold text-yellow-300 place-content-center">MULTILINGUAL PROCESSING DEPARTMENT</h1>
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
     <div class="flex max-w-screen-xl mx-auto mb-5">
@@ -229,7 +229,7 @@ onUnmounted(() => {
 
     <!-- SD RECRUITMENT SECTION -->
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="grid mx-auto font-bold text-yellow-300 place-content-center">SOFTWARE DEVELOPMENT DEPARTMENT</h1>
+        <h1 class="grid mx-auto text-2xl font-bold text-yellow-300 place-content-center">SOFTWARE DEVELOPMENT DEPARTMENT</h1>
     <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
     <div class="flex max-w-screen-md mx-auto mb-5 items-justify">
@@ -284,8 +284,8 @@ onUnmounted(() => {
     </div>
 
     <div class="flex flex-col items-center justify-center h-64 bg-blue-800 ">
-      <h1 class="text-6xl font-bold text-white">Dream Big. Soar High. Make your dreams come true.</h1>
-      <p class="max-w-screen-xl mx-auto mt-5 text-3xl text-justify text-white">
+      <h1 class="text-5xl font-bold text-white">Dream Big. Soar High. Make your dreams come true.</h1>
+      <p class="max-w-screen-xl mx-auto mt-5 text-2xl text-justify text-white">
         Here are CCK, everything is possible.
       </p>
     </div>

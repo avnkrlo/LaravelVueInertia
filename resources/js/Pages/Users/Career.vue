@@ -168,8 +168,8 @@ onUnmounted(() => {
     </div>
 
     <div class="flex flex-col items-center justify-center h-64 mt-10 bg-blue-800 ">
-        <h1 class="text-6xl font-bold text-white">Be a part of our team!</h1>
-        <p class="max-w-screen-xl mx-auto mt-5 text-3xl text-justify text-white">
+        <h1 class="text-5xl font-bold text-white">Be a part of our team!</h1>
+        <p class="max-w-screen-xl mx-auto mt-5 text-2xl text-justify text-white">
             We will help you achieve your goals. We will help you build a career here in CCK.
         </p>
         

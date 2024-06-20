@@ -42,11 +42,11 @@ const form = useForm({
                 It takes more than interest, we have plans and strategies specifically for your business needs.
             </h1>
             
-            <div class="grid place-content-end">
+            <!-- <div class="grid place-content-end">
                 <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-white rounded-lg hover:text-gray-900 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                     GET QUOTE
                 </a>  
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -61,7 +61,7 @@ const form = useForm({
 
     <div class="mb-5">
         <h1 class="grid mt-10 mb-5 text-3xl font-bold text-white uppercase place-content-center">Software Development Quote - Software Development Services Pricing</h1>
-        <h1 class="flex items-center justify-center mb-5 text-xl text-white">Kindly fill the form below to get quote for your data entry requirements. You will get the quote within 24 hours.</h1>
+        <h1 class="flex items-center justify-center mb-5 text-xl text-white">Kindly fill the form below to get quote for your software development requirements. You will get the quote within 24 hours.</h1>
 
         <div class="flex flex-row justify-center">
             <form @submit.prevent="form.post('/submit')" class="flex flex-col justify-center">

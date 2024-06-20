@@ -102,13 +102,13 @@ const goToWadline = () => {
           <h1 class="grid mx-auto text-3xl font-bold text-yellow-300 uppercase place-content-center">Our History</h1>
         <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
-        <h1 class="grid mb-5 text-4xl font-semibold text-center place-content-center">We Provide Superior Quality of Service</h1>
-        <p class="flex max-w-screen-xl mx-auto text-xl text-justify">
+        <h1 class="grid mb-5 text-5xl font-semibold text-center text-white place-content-center">We Provide Superior Quality of Service</h1>
+        <p class="flex max-w-screen-xl mx-auto text-xl text-justify text-white">
           The company’s work values emphasize the importance of inspired problem-solving, strategic management of operations and production, and creative solutions. 
           Furthermore, all the services that CCK offers are founded firmly on Japanese-standard quality.
         </p>
 
-        <p class="flex max-w-screen-xl mx-auto mt-5 text-xl text-justify">
+        <p class="flex max-w-screen-xl mx-auto mt-5 text-xl text-justify text-white">
           CCK City Network, Inc. is a BPO company located in Asia with 15 branches in four countries. 
           As an industry specialist in data entry services, CCK also conducts and owns different enterprises for software development, language education, digital marketing, and customer support. 
           Composed of talented data analysts and scientists, seasoned customer service advocates, inspired language experts, and creative technology engineers, the company is robust, 
@@ -201,7 +201,7 @@ const goToWadline = () => {
     <div>
         <h1 class="grid mt-10 mb-5 text-5xl font-bold text-yellow-300 uppercase place-content-center">CCK is an honest business.</h1>
 
-        <p class="flex max-w-screen-xl mx-auto mb-10 text-2xl text-justify">
+        <p class="flex max-w-screen-xl mx-auto mb-10 text-2xl text-justify text-white">
           We ensure that our clients most valued assets - their customers are protected and secured as we operate in a high standard of international service. 
           We also guarantee that their business is protected against security risk while ensuring cost-effective business bringing confidence in our service delivery.
         </p>
@@ -266,7 +266,7 @@ const goToWadline = () => {
     </div>
 
     <div class="flex flex-col items-center justify-center h-64 pb-10 bg-blue-800">
-      <h1 class="grid mt-10 mb-5 text-3xl font-bold text-white uppercase place-content-center">Our company is worthy to be trusted!</h1>
+      <h1 class="grid mt-10 mb-5 text-5xl font-bold text-white uppercase place-content-center">Our company is worthy to be trusted!</h1>
       <p class="max-w-screen-xl mx-auto text-2xl text-justify text-white">
         CCK ensures the future of every employee and aspires to be the company that customers bring new opportunities.
       </p>

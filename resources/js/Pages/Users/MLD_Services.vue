@@ -76,7 +76,7 @@ onUnmounted(() => {
     </button>
 
     <div class="pt-10 mb-10">
-        <h1 class="flex max-w-screen-xl mx-auto italic font-bold">What we do</h1>
+        <h1 class="flex max-w-screen-xl mx-auto text-4xl italic font-bold">What we do</h1>
         <p class="flex max-w-screen-xl mx-auto text-justify">
             CCK City Network, Inc. seeks to promote second language proficiency and academic excellence to culturally and linguistically 
             diverse English language learners. 
@@ -84,7 +84,7 @@ onUnmounted(() => {
             English language for casual conversations, school qualifications, and business requirements.
         </p>
 
-        <h1 class="flex max-w-screen-xl mx-auto mt-10 italic font-bold">What we offer</h1>
+        <h1 class="flex max-w-screen-xl mx-auto mt-10 text-4xl italic font-bold">What we offer</h1>
         <p class="flex max-w-screen-xl mx-auto text-justify">
             Housing experienced teams of English language professionals, both teachers and researchers, 
             to serve to the public’s growing demand to learn the English language and all its practical applications in school and in the business. 
@@ -166,7 +166,7 @@ onUnmounted(() => {
                 </figure> -->
                     
                 <div class="card-body">
-                    <h2 class="text-2xl text-orange-300 card-title">High Quality, High Security</h2>
+                    <h2 class="text-3xl text-orange-300 card-title">High Quality, High Security</h2>
                     <p>● Certified by international standards:ISO9001 (Quality) & ISO27001 (Security).</p>
                     <p>● Presence of resident Japanese management.</p>
                     <p>● Various skill upgrade programs available including Japanese language.</p>
@@ -182,7 +182,7 @@ onUnmounted(() => {
                 </figure> -->
                     
                 <div class="card-body">
-                    <h2 class="text-2xl text-orange-300 card-title">High Reliability</h2>
+                    <h2 class="text-3xl text-orange-300 card-title">High Reliability</h2>
                     <p>● Full back-up by in-the-building electric generator.</p>
                     <p>● All the terminals are UPS integrated.</p>
                     <p>● Multiple transmission lines (instant switch during system failure.)</p>
@@ -201,7 +201,7 @@ onUnmounted(() => {
                 </figure> -->
 
                 <div class="card-body">
-                    <h2 class="text-2xl text-orange-300 card-title">High Peformance</h2>
+                    <h2 class="text-3xl text-orange-300 card-title">High Peformance</h2>
                     <p>● Data processing 24hrs/365 days/480 people.</p>
                     <p>● Data processing US/Europe and Asia regions.</p>
                     <p>● Processing of ledgers (fixed form) with Chinese characters.</p>
