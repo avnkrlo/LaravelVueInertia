@@ -2,6 +2,7 @@
 import { Link } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
+const isNavbarOpen = ref(false);
 const isServicesDropdownOpen = ref(false);
 const isQuoteDropdownOpen = ref(false);
   
@@ -141,5 +142,5 @@ const hideQuoteDropdown = () => {
         </div>
     </nav>
 
-    <slot/>
+    <slot></slot>
 </template>

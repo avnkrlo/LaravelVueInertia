@@ -27,7 +27,7 @@ const goToPrivacy = () => {
             <div class="md:flex md:justify-between">
             <div class="flex flex-row">
                 <Link :href="route('index')" class="flex items-center">
-                    <img src="Images/cck_logo.png" class="h-25 me-3" alt="FlowBite Logo" />
+                    <img src="Images/cck_logo.png" class="h-25 me-3" />
                 </Link>
                 <div class="flex flex-col w-64">
                     <div>
@@ -128,5 +128,5 @@ const goToPrivacy = () => {
             </div>
         </div>
     </footer>
-    <slot/>
+    <slot></slot>
 </template>
