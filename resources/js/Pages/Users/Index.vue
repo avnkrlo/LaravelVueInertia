@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
+import Parallaxy from '@lucien144/vue3-parallaxy';
 
 const items = [
   { src: 'Images/img11.jpg', alt: 'Slide 1' },
@@ -95,8 +96,17 @@ defineOptions({
           CCK also keeps its customers and businesses away from security risks, bringing confidence in service delivery.
         </p>
     </div>
+
+    <div class="grid pt-10 pb-5 place-content-center">
+      <Parallaxy
+        :speed="40"
+        direction="opposite"
+        class="relative z-20 flex items-center justify-end">
+          <img src="Images/life3.jpg" class="w-64">
+      </Parallaxy>
+    </div>
     
-    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+    <!-- <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" /> -->
       <div class="flex items-center h-64 max-w-screen-lg mx-auto text-black bg-gray-600 carousel">
         <div id="slide1" class="relative flex items-center justify-center w-full carousel-item">
           <div>

@@ -98,9 +98,9 @@ const goToWadline = () => {
     </button>
 
     <div>
-        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-          <h1 class="grid mx-auto text-3xl font-bold text-yellow-300 uppercase place-content-center">Our History</h1>
-        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+        <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
+          <h1 class="grid mx-auto text-3xl font-bold text-orange-300 uppercase place-content-center">Our History</h1>
+        <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
 
         <h1 class="grid mb-5 text-5xl font-semibold text-center text-white place-content-center">We Provide Superior Quality of Service</h1>
         <p class="flex max-w-screen-xl mx-auto text-xl text-justify text-white">
@@ -199,7 +199,7 @@ const goToWadline = () => {
     </div>
 
     <div>
-        <h1 class="grid mt-10 mb-5 text-5xl font-bold text-yellow-300 uppercase place-content-center">CCK is an honest business.</h1>
+        <h1 class="grid mt-10 mb-5 text-5xl font-bold text-orange-300 uppercase place-content-center">CCK is an honest business.</h1>
 
         <p class="flex max-w-screen-xl mx-auto mb-10 text-2xl text-justify text-white">
           We ensure that our clients most valued assets - their customers are protected and secured as we operate in a high standard of international service. 
@@ -216,9 +216,9 @@ const goToWadline = () => {
     </div>
 
     <div class="pb-10">
-      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="grid mx-auto text-3xl font-bold text-yellow-300 uppercase place-content-center">Certification</h1>
-      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+      <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
+        <h1 class="grid mx-auto text-3xl font-bold text-orange-300 uppercase place-content-center">Certification</h1>
+      <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
 
       <div class="flex max-w-screen-lg mx-auto items-justify">
             <div class="mt-5 ml-5 w-96">
@@ -236,9 +236,9 @@ const goToWadline = () => {
     </div>
 
     <div>
-      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="grid mx-auto text-3xl font-bold text-yellow-300 uppercase place-content-center">Accreditation</h1>
-      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+      <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
+        <h1 class="grid mx-auto text-3xl font-bold text-orange-300 uppercase place-content-center">Accreditation</h1>
+      <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
 
       <div class="flex max-w-screen-md mx-auto items-justify">
         <div class="pt-4 mt-5 ml-5 w-96">
@@ -252,9 +252,9 @@ const goToWadline = () => {
     </div>
 
     <div class="mb-10">
-      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="grid mx-auto text-3xl font-bold text-yellow-300 uppercase place-content-center">Verification</h1>
-      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+      <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
+        <h1 class="grid mx-auto text-3xl font-bold text-orange-300 uppercase place-content-center">Verification</h1>
+      <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
 
       <div class="grid place-content-center items-justify">
         <div class="w-64 mt-5">
@@ -271,5 +271,5 @@ const goToWadline = () => {
         CCK ensures the future of every employee and aspires to be the company that customers bring new opportunities.
       </p>
     </div>
-    <hr class="border-yellow-300 sm:mx-auto dark:border-yellow-300" />
+    <hr class="border-orange-300 sm:mx-auto dark:border-orange-300" />
 </template>

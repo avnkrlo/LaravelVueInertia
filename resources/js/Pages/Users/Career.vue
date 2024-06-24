@@ -60,17 +60,17 @@ onUnmounted(() => {
     </button>
 
     <div class="pt-5 pb-5">
-        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-        <h1 class="flex max-w-screen-xl mx-auto mb-5 text-4xl font-bold text-yellow-300">Why CCK City Network, Inc.</h1>
+        <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
+        <h1 class="flex max-w-screen-xl mx-auto mb-5 text-4xl font-bold text-orange-300">Why CCK City Network, Inc.</h1>
         <p class="flex max-w-screen-xl mx-auto text-xl text-justify">
             There are growing opportunities here at CCK. It offers an exciting way to exercise one's skills and challenge weaknesses to be turned into assets. 
             This company demonstrates innovation and invites development not only individually but as a team and family. 
             Its top notch reputation built in the industry would make anyone part of it proud and create a culture that pursues excellence.
         </p>
 
-        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-            <h1 class="grid mx-auto text-3xl font-bold text-yellow-300 uppercase place-content-center">Life at CCK</h1>
-        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+        <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
+            <h1 class="grid mx-auto text-3xl font-bold text-orange-300 uppercase place-content-center">Life at CCK</h1>
+        <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
 
         <p class="flex max-w-screen-xl mx-auto mb-5 text-xl text-justify">
             Here at CCK we remind ourselves that we are greater than our problems and refuse to give up on difficult tasks despite the tenacity and use these struggles to grow better. 
@@ -120,9 +120,9 @@ onUnmounted(() => {
     </div>
 
     <div>
-        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
-            <h1 class="grid text-3xl font-bold text-yellow-300 uppercase place-content-center">Job Opportunities</h1>
-        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+        <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
+            <h1 class="grid text-3xl font-bold text-orange-300 uppercase place-content-center">Job Opportunities</h1>
+        <hr class="my-6 border-orange-300 sm:mx-auto dark:border-orange-300 lg:my-8" />
 
 
         <h1 class="grid text-5xl font-bold text-white uppercase place-content-center">DREAM BIG. SOAR HIGH. BE QUALIFIED.</h1>
@@ -133,15 +133,15 @@ onUnmounted(() => {
         <div class="flex max-w-screen-lg mx-auto items-justify">
             <div class="mt-10 ml-20 shadow-xl card w-96 bg-base-300">
                 <div class="text-justify card-body">
-                    <h2 class="text-white card-title">DATA ENCODER</h2>
-                    <p class="grid">Entering accurate data while following all regulations and maintaining confidentiality as agreed with the client.</p>
+                    <h2 class="text-orange-300 card-title">DATA ENCODER</h2>
+                    <p class="grid text-white">Entering accurate data while following all regulations and maintaining confidentiality as agreed with the client.</p>
                 </div>
             </div>
 
             <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
                 <div class="text-justify card-body">
-                    <h2 class="text-white card-title">ENGLISH TEST RATER</h2>
-                    <p class="grid place-content-center">Evaluates student responses to subject-related and open-ended questions according to a customer supplied scoring guide. 
+                    <h2 class="text-orange-300 card-title">ENGLISH TEST RATER</h2>
+                    <p class="grid text-white place-content-center">Evaluates student responses to subject-related and open-ended questions according to a customer supplied scoring guide. 
                         Successfully internalizes training and customer scoring guide. Scorers will work in an office environment.</p>
                 </div>
             </div>
@@ -150,8 +150,8 @@ onUnmounted(() => {
         <div class="flex max-w-screen-lg mx-auto items-justify">
             <div class="mt-10 ml-20 shadow-xl card w-96 bg-base-300">
                 <div class="text-justify card-body">
-                    <h2 class="text-white card-title">SOFTWARE DEVELOPER</h2>
-                    <p class="grid place-content-center">Design and Develop web application using ASP.NET MVC. and WCF Web. Provide web development and support on product sites using the following environments: 
+                    <h2 class="text-orange-300 card-title">SOFTWARE DEVELOPER</h2>
+                    <p class="grid text-white place-content-center">Design and Develop web application using ASP.NET MVC. and WCF Web. Provide web development and support on product sites using the following environments: 
                         Ubuntu, Apache, mySQL and PHP (LAMP) and/or Windows+WAMPServer package, Subversion(SVN)/GIT, Zend Framework, jQuery, XDebug Services. Smartphone (Android and iPhone), 
                         Windows APP, Server (PHP, mySQL), Client (HTML, Java, CSS, AJAX)</p>
                 </div>
@@ -159,8 +159,8 @@ onUnmounted(() => {
 
             <div class="mt-10 ml-10 shadow-xl card w-96 bg-base-300">
                 <div class="text-justify card-body">
-                    <h2 class="text-white card-title">CALL CENTER AGENT</h2>
-                    <p class="grid">Be a person who handles incoming or outgoing customer calls for a business, 
+                    <h2 class="text-orange-300 card-title">CALL CENTER AGENT</h2>
+                    <p class="grid text-white">Be a person who handles incoming or outgoing customer calls for a business, 
                         handles account inquiries, customer complaints or support issues.</p>
                 </div>
             </div>
@@ -179,5 +179,5 @@ onUnmounted(() => {
             </button>  
         </div>
     </div>
-    <hr class="border-yellow-300 sm:mx-auto dark:border-yellow-300" />
+    <hr class="border-orange-300 sm:mx-auto dark:border-orange-300" />
 </template>

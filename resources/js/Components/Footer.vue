@@ -31,7 +31,7 @@ const goToPrivacy = () => {
                 </Link>
                 <div class="flex flex-col w-64">
                     <div>
-                        <p class="mb-3 text-2xl font-bold">
+                        <p class="mb-3 text-2xl font-bold text-white">
                             CCK City Network, Inc.
                         </p>
 
@@ -90,7 +90,7 @@ const goToPrivacy = () => {
             </div>
         </div>
 
-        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+        <hr class="my-6 border-orange-600 sm:mx-auto dark:border-orange-600 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">All Rights Reserved</a>.
                 </span>

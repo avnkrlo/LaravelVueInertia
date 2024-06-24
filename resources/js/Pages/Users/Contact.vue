@@ -166,27 +166,27 @@ const goToCCK_JP = () => {
             <form @submit.prevent="form.post('/submit')" class="flex flex-col justify-center">
                 <!-- name -->
                 <label for="name" class="text-white">Full Name</label>
-                <input type="text" v-model="form.name" class="mb-3 rounded-md w-96">
+                    <input v-model="form.name" type="text" name="name" id="name" autocomplete="given-name" class="mb-3 block w-full rounded-md border-0 pl-2 py-1.5 text-white shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 text-xl sm:text-sm sm:leading-6 md:text-md md:leading-6 lg:text-lg lg:leading-6">
                 <div v-if="form.errors.name" class="text-red-600">{{ form.errors.name }}</div>
 
                 <!-- company name -->
                 <label for="company" class="text-white">Company Name</label>
-                <input type="text" v-model="form.company" class="mb-3 rounded-md">
+                    <input v-model="form.company" type="text" name="company" id="company" autocomplete="given-name" class="mb-3 block w-full rounded-md border-0 pl-2 py-1.5 text-white shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 text-xl sm:text-sm sm:leading-6 md:text-md md:leading-6 lg:text-lg lg:leading-6">
                 <div v-if="form.errors.company" class="text-red-600">{{ form.errors.company }}</div>
 
                 <!-- email -->
                 <label for="email" class="text-white">Business Email Address</label>
-                <input type="text" v-model="form.email" class="mb-3 rounded-md">
+                    <input v-model="form.email" type="text" name="email" id="email" autocomplete="email" class="mb-3 block w-full rounded-md border-0 pl-2 py-1.5 text-white shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 text-xl sm:text-sm sm:leading-6 md:text-md md:leading-6 lg:text-lg lg:leading-6">
                 <div v-if="form.errors.email" class="text-red-600">{{ form.errors.email }}</div>
 
                 <!-- contact -->
                 <label for="contact" class="text-white">Primary Contact Number</label>
-                <input type="text" v-model="form.contact" class="mb-3 rounded-md">
+                    <input v-model="form.contact" type="text" name="contact" id="contact" autocomplete="contact" class="mb-3 block w-full rounded-md border-0 pl-2 py-1.5 text-white shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 text-xl sm:text-sm sm:leading-6 md:text-md md:leading-6 lg:text-lg lg:leading-6">
                 <div v-if="form.errors.contact" class="text-red-600">{{ form.errors.contact }}</div>
 
                 <!-- service -->
                 <label for="service" class="text-white">Services Required</label>
-                <select v-model="form.service" class="w-full max-w-xs mb-3 select select-bordered">
+                <select v-model="form.service" id="service" name="service" autocomplete="service" class="block w-full rounded-md border-0 pl-1 py-1.5 text-white shadow-sm ring-1 ring-inset ring-orange-300 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:max-w-xs text-xl sm:text-sm sm:leading-6 md:text-md md:leading-6 lg:text-lg lg:leading-6">
                     <option disabled selected>Select a Service</option>
                     <option>Data Entry</option>
                     <option>Software Development</option>
@@ -196,7 +196,7 @@ const goToCCK_JP = () => {
 
                 <!-- note -->
                 <label for="note" class="text-white">Send a Note</label>
-                <textarea v-model="form.note" class="textarea textarea-bordered"></textarea>
+                    <textarea v-model="form.note" id="note" name="note" rows="3" class="block w-full rounded-md border-0 pl-2 py-1.5 text-white shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 text-xl sm:text-sm sm:leading-6 md:text-md md:leading-6 lg:text-lg lg:leading-6"></textarea>
                 <div v-if="form.errors.note" class="text-red-600">{{ form.errors.note }}</div>
 
                 <button @click="formQuoteSubmit()" class="justify-center py-2 mt-5 text-xl text-center text-white uppercase bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 hover:bg-transparent focus:ring-4 focus:ring-orange-300">
