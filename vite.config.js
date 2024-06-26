@@ -2,14 +2,19 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 import path from 'path'; 
-import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
     plugins: [
-        UnoCSS(),
-        laravel(['resources/js/app.js']),
+        laravel({
+            input: ['resources/js/app.js', 'resources/css/app.css'],
+            ssr: 'resources/js/ssr.js',
+            refresh: true,
+        }),
         vue({
             template: {
+                compilerOptions: {
+                    // isCustomElement: (tag) => ['Link'].includes(tag),
+                },
                 transformAssetUrls: {
                     // The Vue plugin will re-write asset URLs, when referenced
                     // in Single File Components, to point to the Laravel web
@@ -29,6 +34,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
+            '@': '/resources/js',
             'ziggy-js': path.resolve('./vendor/tightenco/ziggy/dist'),
         },
     },

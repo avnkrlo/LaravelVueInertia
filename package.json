@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build && vite build --ssr"
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^5.0.4",
@@ -13,13 +13,24 @@
         "laravel-vite-plugin": "^1.0",
         "postcss": "^8.4.38",
         "tailwindcss": "^3.4.3",
-        "unocss": "^0.60.2",
         "vite": "^5.0"
     },
     "dependencies": {
+        "@fawmi/vue-google-maps": "^0.9.79",
+        "@flaticon/flaticon-uicons": "^3.2.1",
+        "@fortawesome/fontawesome-svg-core": "^6.5.2",
+        "@fortawesome/free-brands-svg-icons": "^6.5.2",
+        "@fortawesome/free-regular-svg-icons": "^6.5.2",
+        "@fortawesome/free-solid-svg-icons": "^6.5.2",
+        "@fortawesome/vue-fontawesome": "^3.0.8",
         "@headlessui/vue": "^1.7.22",
+        "@inertiajs/progress": "^0.2.7",
         "@inertiajs/vue3": "^1.0.16",
+        "@lucien144/vue3-parallaxy": "^0.1.2",
+        "@vue/server-renderer": "^3.4.29",
         "nprogress": "^0.2.0",
+        "vue-meta": "^3.0.0-alpha.2",
+        "vue-parallaxy": "^1.1.1",
         "vue-toastification": "^2.0.0-rc.5"
     }
 }

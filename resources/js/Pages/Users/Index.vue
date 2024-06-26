@@ -1,55 +1,306 @@
-<script setup>
-import { Link, router, useForm } from '@inertiajs/vue3';
-import { useToast } from 'vue-toastification';
+<!-- <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
 
-const toast = useToast();
+const imageUrl = '/public/Images/life3.jpg';
+const imageRef = ref(null);
+const scrollY = ref(window.scrollY);
 
-const form = useForm({
-    email_address: null,
-    password: null,
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
 });
 
-function submit() {
-    form.post(route('login'))
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+function handleScroll() {
+  if (imageRef.value) {
+    const image = imageRef.value;
+    const scrollPosition = window.scrollY;
+    image.style.transform = `translateY(${scrollPosition}px)`;
+  }
 }
+
+const items = [
+  { src: 'Images/img11.jpg', alt: 'Slide 1' },
+  { src: 'Images/img12.jpg', alt: 'Slide 2' },
+];
+
+const currentIndex = ref(0);
+let interval = null;
+
+const goToSlide = (index) => {
+  currentIndex.value = index;
+};
+
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % items.length;
+};
+
+const start = () => {
+  if (!interval) {
+    interval = setInterval(nextSlide, 3000);
+  }
+};
+
+const pause = () => {
+  if (interval) {
+    clearInterval(interval);
+    interval = null;
+  }
+};
+
+onMounted(start);
+onUnmounted(pause);
+
+const btnBackToTop = ref(null);
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const handleScroll = () => {
+  if (window.scrollY > 100) {
+    btnBackToTop.value.classList.remove('hidden');
+  } else {
+    btnBackToTop.value.classList.add('hidden');
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+defineOptions({
+    layout: AuthenticatedLayout,
+})
+</script> -->
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
+
+const imageUrl = '/Images/life3.jpg';
+const imageRef = ref(null);
+
+const handleImageScroll = () => {
+  if (imageRef.value) {
+    const image = imageRef.value;
+    const scrollPosition = window.scrollY;
+    image.style.transform = `translateY(-${scrollPosition * 0.3}px)`; // Adjust multiplier for desired parallax effect
+  }
+};
+
+onMounted(() => {
+  // Add event listener for image scroll effect
+  window.addEventListener('scroll', handleImageScroll);
+});
+
+onUnmounted(() => {
+  // Clean up event listener on component unmount
+  window.removeEventListener('scroll', handleImageScroll);
+});
+
+const items = [
+  { src: 'Images/img11.jpg', alt: 'Slide 1' },
+  { src: 'Images/img12.jpg', alt: 'Slide 2' },
+];
+
+const currentIndex = ref(0);
+let interval = null;
+
+const startSlideshow = () => {
+  if (!interval) {
+    interval = setInterval(nextSlide, 3000);
+  }
+};
+
+const pauseSlideshow = () => {
+  if (interval) {
+    clearInterval(interval);
+    interval = null;
+  }
+};
+
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % items.length;
+};
+
+onMounted(startSlideshow);
+onUnmounted(pauseSlideshow);
+
+const btnBackToTop = ref(null);
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const handleScroll = () => {
+  if (window.scrollY > 100) {
+    btnBackToTop.value.classList.remove('hidden');
+  } else {
+    btnBackToTop.value.classList.add('hidden');
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+defineOptions({
+  layout: AuthenticatedLayout,
+});
 </script>
 
+<style scoped>
+.container {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure content scrolls over the fixed image */
+}
+
+.fixed-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ensure it covers the entire container */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.fixed-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1; /* Ensure it's behind other content */
+  opacity: 0.5; /* Adjust opacity as desired */
+}
+</style>
+
+
 <template>
-    <main class="grid min-h-screen place-content-center">
-        <form @submit.prevent="submit">
-            <div class="shadow-xl card w-96">
-                <figure class="px-10 pt-10">
-                    <img src="Images/logo.jpg" alt="Shoes" class="rounded-xl" />
-                </figure>
+    <!-- JUMBOTRON -->
+    <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+        <div class="max-w-screen-xl mx-auto lg:py-56">
+            <p class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white uppercase md:text-5xl lg:text-6xl">
+              Our business is to guarantee the success of yours.
+            </p>
+            <p class="mt-5 text-2xl text-white">
+              Every business is different; every business needs specific outsourcing services. 
+              And we can help you there. CCK City Network, Inc. has the keys to help you accelerate the growth of your business.
+            </p>
+        </div>
+    </section>
 
-                <div class="card-body">
-                    <label for="email_address" class="flex items-center gap-2 input input-bordered">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
-                            <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
-                        <input id="email_address" type="text" class="grow" placeholder="Enter Email" v-model="form.email_address" required/>
-                    </label>
-                    <p class="text-red-600">{{ form.errors.email_address }}</p>
+    <!-- Back to top button -->
+    <button type="button" @click="scrollToTop" id="btn-back-to-top" ref="btnBackToTop" class="!fixed bottom-5 end-5 hidden rounded-full bg-orange-600 p-3 text-xs font-medium uppercase leading-tight text-white border border-orange-300 shadow-md transition duration-150 ease-in-out hover:bg-transparent hover:shadow-lg hover:text-orange-300 focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-600 active:shadow-lg" >
+        <span class="[&>svg]:w-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </span>
+    </button>
 
-                    <label for="password" class="flex items-center gap-2 input input-bordered">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="currentColor" class="w-4 h-4 opacity-70">
-                            <path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd" /></svg>
-                        <input id="password" type="password" class="grow" placeholder="Enter Password" v-model="form.password" required/>
-                    </label>
-                    <p class="text-red-600">{{ form.errors.password }}</p>
-                    
-                    <div class="form-control">
-                        <label class="cursor-pointer label">
-                            <span class="label-text">Remember me</span> 
-                            <input type="checkbox" class="checkbox" />
-                        </label>
-                    </div>
+    <div>
+        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+          <h1 class="grid mx-auto text-4xl font-bold text-yellow-300 uppercase place-content-center">OUR BUSINESS</h1>
+        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
 
-                    <div class="card-actions">
-                        <button type="submit" class="w-full max-w-xs btn btn-active btn-primary">LOGIN</button>
-                        <Link :href="route('register.create')" class="w-full max-w-xs btn btn-active btn-ghost">CREATE AN ACCOUNT</Link>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </main>
+        <h1 class="grid mb-5 text-4xl font-bold text-white place-content-center">Made of Honesty and Experience</h1>
+        <p class="flex max-w-screen-xl mx-auto text-xl text-justify text-white">
+          Integrity is present in every level of interaction, simultaneously guaranteeing the security and protection of our clients’ valued assets. 
+          CCK also keeps its customers and businesses away from security risks, bringing confidence in service delivery.
+        </p>
+    </div>
+    
+    <div class="container">
+      <!-- Text content on top -->
+      <div class="text-content">
+        <h1>Welcome to My Page</h1>
+        <p>This is some introductory text.</p>
+      </div>
+
+      <!-- Fixed image container -->
+      <div class="fixed-image-container">
+        <img :src="imageUrl" alt="Fixed Image" class="fixed-image" ref="imageRef" />
+      </div>
+
+      <!-- Your content here -->
+      <div class="content">
+        <!-- Content that will scroll over the fixed image -->
+        <ul>
+          <li v-for="(item, index) in items" :key="index">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" /> -->
+      <!-- <div class="flex items-center h-64 max-w-screen-lg mx-auto text-black bg-gray-600 carousel">
+        <div id="slide1" class="relative flex items-center justify-center w-full carousel-item">
+          <div>
+            <p class="pl-20 text-2xl">"Invested and inspired, that's what we are."</p>
+            <p class="flex pl-20 pr-20 text-md">The staggering brain power of our teams is composed of skilled and experienced employees, 
+              consistently available to produce and perform.
+            </p>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="relative flex items-center justify-center w-full carousel-item">
+          <div>
+            <p class="text-2xl">"How can we help you today?"</p>
+            <p class="flex text-md">The services offered by CCK City Network, Inc. rest on the values of quality, accuracy, and data security.  
+              The company understands the complex structure of sustaining and growing a business that relies on  the superior quality of services it needs, 
+              the accuracy of the output it requires, and the security of data and information it owns. 
+            </p>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" /> -->
+
+    <div>
+      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+          <h1 class="grid mx-auto text-4xl font-bold text-yellow-300 uppercase place-content-center">INDUSTRIES WE SERVE</h1>
+        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+
+        <p class="flex max-w-screen-xl mx-auto text-xl text-justify text-white">
+          With over 30 years of experience in handling cost-effective and secure business process outsourcing services, sales and marketing, and programming and software development, 
+          CCK City Network, Inc. has been successful in engaging and innovating for an extensive variety of industries such as education, technology, real-estate, advertising, manufacturing, 
+          energy, government, healthcare, retail, telecommunication, and trading. So, whether your growth objectives demand business processes, marketing, or technology, 
+          with our industry experience and aptitude for innovation, we can make the best solutions for your business, big or small.
+        </p>
+    </div>
+
+    <div>
+      <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+          <h1 class="grid mx-auto text-4xl font-bold text-yellow-300 uppercase place-content-center">BLOGS</h1>
+        <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+    </div>
+
+    
+    <div class="flex flex-col items-center justify-center h-64 pb-10 bg-blue-600">
+      <h1 class="text-5xl font-bold text-white">Stop there, we have something for you.</h1>
+      <p class="max-w-screen-xl mx-auto mt-5 text-2xl text-justify text-white">
+        Join our family and discover that working does not have to be stressful and demanding. 
+        We treat each other in ways that foster healthy personal and professional spaces that we are always excited to have and experience.
+      </p>
+    </div>
+    <hr class="border-yellow-300 sm:mx-auto dark:border-yellow-300" />
 </template>

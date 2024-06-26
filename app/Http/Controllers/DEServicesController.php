@@ -13,7 +13,7 @@ class DEServicesController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Users/DE_Services', [
+        return Inertia::render('Users/DataEntry_Services', [
             'users' => User::all(),
         ]);
     }

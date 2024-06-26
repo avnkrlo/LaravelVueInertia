@@ -1,84 +1,52 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DataCleansingController;
-use App\Http\Controllers\DataConversionController;
 use App\Http\Controllers\DataEntryQuoteController;
-use App\Http\Controllers\DataProcessingController;
 use App\Http\Controllers\DEServicesController;
-use App\Http\Controllers\MLDEvaluationController;
-use App\Http\Controllers\MLDProofreadingController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MLDQuoteController;
-use App\Http\Controllers\MLDTeachingController;
-use App\Http\Controllers\MLDTranslationController;
+use App\Http\Controllers\MLDServicesController;
+use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\RecruitmentController;
+use App\Http\Controllers\SDQuoteController;
+use App\Http\Controllers\SDServicesController;
 
 //Guest Access
 Route::middleware('guest')->group(function (){
-    Route::controller(AuthController::class)->group(function () {
-        Route::get('/', 'index')->name('auth.index');
+    Route::controller(IndexController::class)->group(function(){
+        Route::get('/', 'index')->name('index');
+    });
 
-        Route::post('login', 'store')->name('login');
-        
-   });
-   
-   Route::controller(RegisterController::class)->group(function(){
-        Route::get('create', 'index')->name('register.create');
-
-        Route::post('store', 'store')->name('register.store');
-   });
-});
-
-//Authenticated User
-Route::middleware('auth')->group(function() {
-    Route::controller(DashboardController::class)->group(function(){
-        Route::get('dashboard', 'index')->name('dashboard.index');
-        
-        Route::post('logout', 'destroy')->name('dashboard.destroy');
+    Route::controller(AboutController::class)->group(function () {
+        Route::get('about', 'index')->name('about.index');
     });
 
     Route::controller(DEServicesController::class)->group(function() {
-        Route::get('services', 'index')->name('services.index');
+        Route::get('de-services', 'index')->name('deservices.index');
     });
 
-    Route::controller(DataProcessingController::class)->group(function() {
-        Route::get('processing', 'index')->name('processing.index');
+    Route::controller(MLDServicesController::class)->group(function() {
+        Route::get('mld-services', 'index')->name('mldservices.index');
     });
 
-    Route::controller(DataConversionController::class)->group(function() {
-        Route::get('conversion', 'index')->name('conversion.index');
-    });
-
-    Route::controller(DataCleansingController::class)->group(function() {
-        Route::get('cleansing', 'index')->name('cleansing.index');
-    });
-
-    Route::controller(MLDProofreadingController::class)->group(function() {
-        Route::get('mld-proofreading-services', 'index')->name('mld-proofreading.index');
-    });
-
-    Route::controller(MLDTeachingController::class)->group(function() {
-        Route::get('mld-online-english-language-teaching', 'index')->name('mld-teaching.index');
-    });
-
-    Route::controller(MLDTranslationController::class)->group(function() {
-        Route::get('mld-translation-services', 'index')->name('mld-translation.index');
-    });
-
-    Route::controller(MLDEvaluationController::class)->group(function() {
-        Route::get('mld-test-rating-and-evaluation', 'index')->name('mld-evaluation.index');
+    Route::controller(SDServicesController::class)->group(function() {
+        Route::get('sd-services', 'index')->name('sdservices.index');
     });
 
     Route::controller(DataEntryQuoteController::class)->group(function() {
         Route::get('de-quote', 'index')->name('dequote.index');
     });
 
-    Route::controller(MLDQuoteController::class)->group(function() {
-        Route::get('mld-quote', 'index')->name('mldquote.index');
+    // Route::controller(MLDQuoteController::class)->group(function() {
+    //     Route::get('mld-quote', 'index')->name('mldquote.index');
+    // });
+
+    Route::controller(SDQuoteController::class)->group(function() {
+        Route::get('sd-quote', 'index')->name('sdquote.index');
     });
 
     Route::controller(BlogController::class)->group(function() {
@@ -87,5 +55,17 @@ Route::middleware('auth')->group(function() {
 
     Route::controller(ContactController::class)->group(function() {
         Route::get('contact', 'index')->name('contact.index'); 
+    });
+
+    Route::controller(PrivacyController::class)->group(function() {
+        Route::get('privacy-policy', 'index')->name('privacy.index');
+    });
+
+    Route::controller(RecruitmentController::class)->group(function() {
+        Route::get('recruitment', 'index')->name('recruitment.index');
+    });
+
+    Route::controller(CareerController::class)->group(function() {
+        Route::get('career', 'index')->name('career.index');
     });
 });
