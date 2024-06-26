@@ -1,4 +1,6 @@
 <script setup>
+import { Link } from '@inertiajs/vue3';
+
 const goToFB = () => {
     window.open('https://www.facebook.com/CCKCityNetwork');
 }

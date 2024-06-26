@@ -1,7 +1,26 @@
-<script setup>
+<!-- <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
-import Parallaxy from '@lucien144/vue3-parallaxy';
+
+const imageUrl = '/public/Images/life3.jpg';
+const imageRef = ref(null);
+const scrollY = ref(window.scrollY);
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+function handleScroll() {
+  if (imageRef.value) {
+    const image = imageRef.value;
+    const scrollPosition = window.scrollY;
+    image.style.transform = `translateY(${scrollPosition}px)`;
+  }
+}
 
 const items = [
   { src: 'Images/img11.jpg', alt: 'Slide 1' },
@@ -60,7 +79,115 @@ onUnmounted(() => {
 defineOptions({
     layout: AuthenticatedLayout,
 })
+</script> -->
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
+
+const imageUrl = '/Images/life3.jpg';
+const imageRef = ref(null);
+
+const handleImageScroll = () => {
+  if (imageRef.value) {
+    const image = imageRef.value;
+    const scrollPosition = window.scrollY;
+    image.style.transform = `translateY(-${scrollPosition * 0.3}px)`; // Adjust multiplier for desired parallax effect
+  }
+};
+
+onMounted(() => {
+  // Add event listener for image scroll effect
+  window.addEventListener('scroll', handleImageScroll);
+});
+
+onUnmounted(() => {
+  // Clean up event listener on component unmount
+  window.removeEventListener('scroll', handleImageScroll);
+});
+
+const items = [
+  { src: 'Images/img11.jpg', alt: 'Slide 1' },
+  { src: 'Images/img12.jpg', alt: 'Slide 2' },
+];
+
+const currentIndex = ref(0);
+let interval = null;
+
+const startSlideshow = () => {
+  if (!interval) {
+    interval = setInterval(nextSlide, 3000);
+  }
+};
+
+const pauseSlideshow = () => {
+  if (interval) {
+    clearInterval(interval);
+    interval = null;
+  }
+};
+
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % items.length;
+};
+
+onMounted(startSlideshow);
+onUnmounted(pauseSlideshow);
+
+const btnBackToTop = ref(null);
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const handleScroll = () => {
+  if (window.scrollY > 100) {
+    btnBackToTop.value.classList.remove('hidden');
+  } else {
+    btnBackToTop.value.classList.add('hidden');
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+defineOptions({
+  layout: AuthenticatedLayout,
+});
 </script>
+
+<style scoped>
+.container {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure content scrolls over the fixed image */
+}
+
+.fixed-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ensure it covers the entire container */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.fixed-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1; /* Ensure it's behind other content */
+  opacity: 0.5; /* Adjust opacity as desired */
+}
+</style>
+
 
 <template>
     <!-- JUMBOTRON -->
@@ -96,18 +223,30 @@ defineOptions({
           CCK also keeps its customers and businesses away from security risks, bringing confidence in service delivery.
         </p>
     </div>
-
-    <div class="grid pt-10 pb-5 place-content-center">
-      <Parallaxy
-        :speed="40"
-        direction="opposite"
-        class="relative z-20 flex items-center justify-end">
-          <img src="Images/life3.jpg" class="w-64">
-      </Parallaxy>
-    </div>
     
+    <div class="container">
+      <!-- Text content on top -->
+      <div class="text-content">
+        <h1>Welcome to My Page</h1>
+        <p>This is some introductory text.</p>
+      </div>
+
+      <!-- Fixed image container -->
+      <div class="fixed-image-container">
+        <img :src="imageUrl" alt="Fixed Image" class="fixed-image" ref="imageRef" />
+      </div>
+
+      <!-- Your content here -->
+      <div class="content">
+        <!-- Content that will scroll over the fixed image -->
+        <ul>
+          <li v-for="(item, index) in items" :key="index">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+
     <!-- <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" /> -->
-      <div class="flex items-center h-64 max-w-screen-lg mx-auto text-black bg-gray-600 carousel">
+      <!-- <div class="flex items-center h-64 max-w-screen-lg mx-auto text-black bg-gray-600 carousel">
         <div id="slide1" class="relative flex items-center justify-center w-full carousel-item">
           <div>
             <p class="pl-20 text-2xl">"Invested and inspired, that's what we are."</p>
@@ -134,7 +273,7 @@ defineOptions({
           </div>
         </div>
       </div>
-    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
+    <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" /> -->
 
     <div>
       <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
