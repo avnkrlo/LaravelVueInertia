@@ -268,7 +268,7 @@ const goToWadline = () => {
       </div>
 
       <div class="flex flex-col items-center ml-5">
-        <img src="Images/osma.jpg" class="min-content-height-width"/>
+        <img src="Images/osma.jpg" class="min-content-height" style="width: 400px;"/>
       </div>
     </div>
     
