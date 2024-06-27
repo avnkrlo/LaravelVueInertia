@@ -50,7 +50,7 @@ onUnmounted(() => {
             </p>
             
             <div class="grid place-content-end">
-                <button @click="goToDEQuote()" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border rounded-lg border-yellow hover:text-yellow-300 sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                <button @click="goToDEQuote()" class="inline-flex items-center justify-center px-10 py-3 text-xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">
                     GET QUOTE
                 </button>  
             </div>

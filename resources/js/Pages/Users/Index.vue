@@ -1,92 +1,11 @@
-<!-- <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
-
-const imageUrl = '/public/Images/life3.jpg';
-const imageRef = ref(null);
-const scrollY = ref(window.scrollY);
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
-
-function handleScroll() {
-  if (imageRef.value) {
-    const image = imageRef.value;
-    const scrollPosition = window.scrollY;
-    image.style.transform = `translateY(${scrollPosition}px)`;
-  }
-}
-
-const items = [
-  { src: 'Images/img11.jpg', alt: 'Slide 1' },
-  { src: 'Images/img12.jpg', alt: 'Slide 2' },
-];
-
-const currentIndex = ref(0);
-let interval = null;
-
-const goToSlide = (index) => {
-  currentIndex.value = index;
-};
-
-const nextSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % items.length;
-};
-
-const start = () => {
-  if (!interval) {
-    interval = setInterval(nextSlide, 3000);
-  }
-};
-
-const pause = () => {
-  if (interval) {
-    clearInterval(interval);
-    interval = null;
-  }
-};
-
-onMounted(start);
-onUnmounted(pause);
-
-const btnBackToTop = ref(null);
-
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
-const handleScroll = () => {
-  if (window.scrollY > 100) {
-    btnBackToTop.value.classList.remove('hidden');
-  } else {
-    btnBackToTop.value.classList.add('hidden');
-  }
-};
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
-
-defineOptions({
-    layout: AuthenticatedLayout,
-})
-</script> -->
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import AuthenticatedLayout from '../../Layouts/AuthenticatedLayout.vue';
 
-const imageUrl = '/Images/life3.jpg';
+const imageUrl = 'Images/life3.jpg';
 const imageRef = ref(null);
 
+// Handle image scroll effect
 const handleImageScroll = () => {
   if (imageRef.value) {
     const image = imageRef.value;
@@ -95,19 +14,11 @@ const handleImageScroll = () => {
   }
 };
 
-onMounted(() => {
-  // Add event listener for image scroll effect
-  window.addEventListener('scroll', handleImageScroll);
-});
-
-onUnmounted(() => {
-  // Clean up event listener on component unmount
-  window.removeEventListener('scroll', handleImageScroll);
-});
-
+// Slideshow functionality
 const items = [
-  { src: 'Images/img11.jpg', alt: 'Slide 1' },
-  { src: 'Images/img12.jpg', alt: 'Slide 2' },
+  { src: '/Images/q1.jpg', alt: 'Slide 1' },
+  { src: '/Images/q2.jpg', alt: 'Slide 2' },
+  { src: '/Images/q3.jpg', alt: 'Slide 3' },
 ];
 
 const currentIndex = ref(0);
@@ -130,9 +41,7 @@ const nextSlide = () => {
   currentIndex.value = (currentIndex.value + 1) % items.length;
 };
 
-onMounted(startSlideshow);
-onUnmounted(pauseSlideshow);
-
+// Back to top button functionality
 const btnBackToTop = ref(null);
 
 const scrollToTop = () => {
@@ -147,12 +56,17 @@ const handleScroll = () => {
   }
 };
 
+// Setup event listeners
 onMounted(() => {
+  window.addEventListener('scroll', handleImageScroll);
   window.addEventListener('scroll', handleScroll);
+  startSlideshow();
 });
 
 onUnmounted(() => {
+  window.removeEventListener('scroll', handleImageScroll);
   window.removeEventListener('scroll', handleScroll);
+  pauseSlideshow();
 });
 
 defineOptions({
@@ -161,30 +75,15 @@ defineOptions({
 </script>
 
 <style scoped>
-.container {
+.slideshow {
   position: relative;
-  width: 100%; /* Adjust width as needed */
-  height: 500px; /* Adjust height as needed */
-  overflow: hidden; /* Ensure content scrolls over the fixed image */
+  z-index: 10;
+  margin-top: 20px;
 }
 
-.fixed-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Ensure it covers the entire container */
-  overflow: hidden; /* Hide overflow to prevent scrollbars */
-}
-
-.fixed-image {
-  position: fixed;
-  top: 0;
-  left: 0;
+.slideshow-image {
   width: 100%;
   height: auto;
-  z-index: -1; /* Ensure it's behind other content */
-  opacity: 0.5; /* Adjust opacity as desired */
 }
 </style>
 
@@ -212,7 +111,7 @@ defineOptions({
         </span>
     </button>
 
-    <div>
+    <div class="mb-10">
         <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
           <h1 class="grid mx-auto text-4xl font-bold text-yellow-300 uppercase place-content-center">OUR BUSINESS</h1>
         <hr class="my-6 border-yellow-300 sm:mx-auto dark:border-yellow-300 lg:my-8" />
@@ -224,24 +123,17 @@ defineOptions({
         </p>
     </div>
     
-    <div class="container">
-      <!-- Text content on top -->
-      <div class="text-content">
-        <h1>Welcome to My Page</h1>
-        <p>This is some introductory text.</p>
-      </div>
+    <div class="mt-10">
+      <Parallaxy
+        :speed="0"
+        class="relative flex justify-center items-center">
+        <img src="Images/life3.jpg" class="h-84 md:w-3/4"/>
+      </Parallaxy>
 
-      <!-- Fixed image container -->
-      <div class="fixed-image-container">
-        <img :src="imageUrl" alt="Fixed Image" class="fixed-image" ref="imageRef" />
-      </div>
-
-      <!-- Your content here -->
-      <div class="content">
-        <!-- Content that will scroll over the fixed image -->
-        <ul>
-          <li v-for="(item, index) in items" :key="index">{{ item }}</li>
-        </ul>
+      <div class="mt-10">
+        <div class="slideshow">
+          <img :src="items[currentIndex].src" :alt="items[currentIndex].alt" class="slideshow-image" />
+        </div>
       </div>
     </div>
 
@@ -255,7 +147,7 @@ defineOptions({
             </p>
           </div>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❮</a> 
             <a href="#slide2" class="btn btn-circle">❯</a>
           </div>
         </div> 
@@ -269,6 +161,19 @@ defineOptions({
           </div>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="relative flex items-center justify-center w-full carousel-item">
+          <div>
+            <p class="text-2xl">"How can we help you today?"</p>
+            <p class="flex text-md">The services offered by CCK City Network, Inc. rest on the values of quality, accuracy, and data security.  
+              The company understands the complex structure of sustaining and growing a business that relies on  the superior quality of services it needs, 
+              the accuracy of the output it requires, and the security of data and information it owns. 
+            </p>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
             <a href="#slide1" class="btn btn-circle">❯</a>
           </div>
         </div>
@@ -295,12 +200,18 @@ defineOptions({
     </div>
 
     
-    <div class="flex flex-col items-center justify-center h-64 pb-10 bg-blue-600">
-      <h1 class="text-5xl font-bold text-white">Stop there, we have something for you.</h1>
-      <p class="max-w-screen-xl mx-auto mt-5 text-2xl text-justify text-white">
+    <div class="flex flex-col items-center justify-center h-64 bg-blue-600">
+      <h1 class="text-5xl font-bold text-white mt-10">Stop there, we have something for you.</h1>
+      <p class="max-w-screen-xl mx-auto mt-3 text-2xl text-justify text-white">
         Join our family and discover that working does not have to be stressful and demanding. 
         We treat each other in ways that foster healthy personal and professional spaces that we are always excited to have and experience.
       </p>
+
+      <!-- <div class="flex items-center justify-center">
+        <Link :href="route('contact.index')" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">
+             Contact Us
+        </Link>  
+      </div> -->
     </div>
     <hr class="border-yellow-300 sm:mx-auto dark:border-yellow-300" />
 </template>

@@ -35,20 +35,6 @@ const form = useForm({
 </script>
 
 <template>
-    <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
-        <div class="max-w-screen-xl px-4 py-24 mx-auto text-center lg:py-56">
-            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
-                It takes more than interest, we have plans and strategies specifically for your business needs.
-            </h1>
-            
-            <!-- <div class="grid place-content-end">
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-center border-white rounded-lg borsemider text-hite font-bo1d text-ba2se hover:text-white sm:ms-4 hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                    GET QUOTE
-                </a>  
-            </div> -->
-        </div>
-    </section>
-
     <!-- Back to top button -->
     <button type="button" @click="scrollToTop" id="btn-back-to-top" ref="btnBackToTop" class="!fixed bottom-5 end-5 hidden rounded-full bg-orange-600 p-3 text-xs font-medium uppercase leading-tight text-white border border-orange-300 shadow-md transition duration-150 ease-in-out hover:bg-transparent hover:shadow-lg hover:text-orange-300 focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-600 active:shadow-lg">
         <span class="[&>svg]:w-4">
@@ -58,7 +44,7 @@ const form = useForm({
         </span>
     </button>
 
-    <div class="mb-5">
+    <div class="mb-5 pt-10">
         <h1 class="grid mt-10 mb-5 text-3xl font-bold text-white uppercase place-content-center">Data Entry Quote - Data Entry Services Pricing</h1>
         <h1 class="flex items-center justify-center mb-5 text-xl text-white">Kindly fill the form below to get quote for your data entry requirements. You will get the quote within 24 hours.</h1>
 
@@ -78,8 +64,8 @@ const form = useForm({
 
                 <!-- country -->
                 <label for="country" class="block text-sm font-medium leading-6 text-white">Country</label>
-                <div class="mt-2">
-                    <select v-model="form.country" id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 pl-1 py-1.5 text-white shadow-sm ring-1 ring-inset ring-orange-300 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:max-w-xs text-xl sm:text-sm sm:leading-6 md:text-md md:leading-6 lg:text-lg lg:leading-6">
+                <div>
+                    <select v-model="form.country" id="country" name="country" autocomplete="country-name" class="mb-3 block w-full rounded-md border-0 pl-1 py-1.5 text-white shadow-sm ring-1 ring-inset ring-orange-300 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:max-w-xs text-xl sm:text-sm sm:leading-6 md:text-md md:leading-6 lg:text-lg lg:leading-6">
                         <option disabled selected>Select a Country</option>
                         <option>Afghanistan</option>
                         <option>Albania</option>
@@ -312,170 +298,170 @@ const form = useForm({
     <div class="grid pl-20 pr-20 mt-5 mb-5 place-content-center">
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" checked="checked" /> 
-            <div class="text-xl font-semibold text-white collapse-title ">
+            <div class="text-xl font-semibold text-orange-400 collapse-title ">
                 How much do you charge for data entry services?
             </div>
 
             <div class="collapse-content"> 
-                <p class="mb-2">For both online and offline data entry works, it costs $4 per hour and $700 per month (A Full Time Equivalent data entry operator).</p>
-                <p class="mb-2">Please fill in the ‘data entry quote’ form for both hourly and FTE requirements. For hourly rates, you will get the total number of hours and the total data entry services pricing for performing/executing your project.</p>
-                <p class="mb-2">For monthly rates, it will be easy for us to address you if we know about the nature of your data entry work.</p>
+                <p class="mb-2 text-white">For both online and offline data entry works, it costs $4 per hour and $700 per month (A Full Time Equivalent data entry operator).</p>
+                <p class="mb-2 text-white">Please fill in the ‘data entry quote’ form for both hourly and FTE requirements. For hourly rates, you will get the total number of hours and the total data entry services pricing for performing/executing your project.</p>
+                <p class="mb-2 text-white">For monthly rates, it will be easy for us to address you if we know about the nature of your data entry work.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 Are there any upfront costs?
             </div>
         
             <div class="collapse-content"> 
-                <p class="mb-2">No upfront cost is charged for anyone who represents a company.</p>
-                <p class="mb-2">If you prefer to outsource as an individual rather than a company's representative, you have to pay 50 percent of the total cost as an upfront cost. That too will be charged only for the first time. We will not charge for further projects.</p>
-                <p class="mb-2">If you represent a company, you don’t have to pay a penny before outsourcing.</p>
+                <p class="mb-2 text-white">No upfront cost is charged for anyone who represents a company.</p>
+                <p class="mb-2 text-white">If you prefer to outsource as an individual rather than a company's representative, you have to pay 50 percent of the total cost as an upfront cost. That too will be charged only for the first time. We will not charge for further projects.</p>
+                <p class="mb-2 text-white">If you represent a company, you don’t have to pay a penny before outsourcing.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 How do you calculate costs?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">In the case of monthly works, the cost is fixed i.e., $700 per month.</p>
-                <p class="mb-2">For hourly works, the cost is just $4. We calculate costs based on the total number of hours required to complete your entire project.</p>
+                <p class="mb-2 text-white">In the case of monthly works, the cost is fixed i.e., $700 per month.</p>
+                <p class="mb-2 text-white">For hourly works, the cost is just $4. We calculate costs based on the total number of hours required to complete your entire project.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 Tell me about the payment cycle for Hourly Works.
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">For hourly works, you have to make payment on the same day we deliver the output file as we stipulated in the quote.</p>
-                <p class="mb-2">After completing the project we will send you the output along with the invoice. If you can’t pay on that time, prior information should be sent accordingly.</p>
+                <p class="mb-2 text-white">For hourly works, you have to make payment on the same day we deliver the output file as we stipulated in the quote.</p>
+                <p class="mb-2 text-white">After completing the project we will send you the output along with the invoice. If you can’t pay on that time, prior information should be sent accordingly.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 What about the payment cycle for monthly works?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">In the case of monthly works, we prefer bi-weekly payment after the execution date. After making 2 bi-weekly payments, the payment has to be done monthly on the pre-determined date.</p>
-                <p class="mb-2">If you wish to have different payment cycle, you can (or) please feel free to hash over that.</p>
+                <p class="mb-2 text-white">In the case of monthly works, we prefer bi-weekly payment after the execution date. After making 2 bi-weekly payments, the payment has to be done monthly on the pre-determined date.</p>
+                <p class="mb-2 text-white">If you wish to have different payment cycle, you can (or) please feel free to hash over that.</p>
             </div>
         </div>
         
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 How do you accept payment?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">We mostly work with the international clients. So we accept payments through PayPal or Wire Transfer.</p>
+                <p class="mb-2 text-white">We mostly work with the international clients. So we accept payments through PayPal or Wire Transfer.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 How abot the quality of work?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">Premium quality in our work is our strength. We are keen in providing utmost quality in our output.</p>
-                <p class="mb-2">We will give a sample of our work through which you can come to an idea about our quality.</p>
+                <p class="mb-2 text-white">Premium quality in our work is our strength. We are keen in providing utmost quality in our output.</p>
+                <p class="mb-2 text-white">We will give a sample of our work through which you can come to an idea about our quality.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 What about the data protection?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">All major files are transmitted only through secured FTP server. We are solely responsible for the security of the data throughout the project period.</p>
-                <p class="mb-2">We are also ready to sign SLAs or any other documents that support data protection.</p>
+                <p class="mb-2 text-white">All major files are transmitted only through secured FTP server. We are solely responsible for the security of the data throughout the project period.</p>
+                <p class="mb-2 text-white">We are also ready to sign SLAs or any other documents that support data protection.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 What about the turnaround time?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">Turnaround time will be determined separately for hourly rate and monthly rate works.</p>
-                <p class="mb-2">For hourly rate works, we will work out a sample and impart you about the quantity of work done in an hour. From this sample work data, we will calculate the total number of hours required to complete the project. This will be apparently explained in our quote by stating the overall time assigned for the work.</p>
-                <p class="mb-2">In the case of monthly rate works, we will give you the performance of a day’s work i.e., 8 hours as a sample from which you can know about the turnaround time for the project.</p>
+                <p class="mb-2 text-white">Turnaround time will be determined separately for hourly rate and monthly rate works.</p>
+                <p class="mb-2 text-white">For hourly rate works, we will work out a sample and impart you about the quantity of work done in an hour. From this sample work data, we will calculate the total number of hours required to complete the project. This will be apparently explained in our quote by stating the overall time assigned for the work.</p>
+                <p class="mb-2 text-white">In the case of monthly rate works, we will give you the performance of a day’s work i.e., 8 hours as a sample from which you can know about the turnaround time for the project.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 How can we know about the status of the project and how our queries are handled?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">The status of the project will be reported within few hours upon your query via Email.</p>
-                <p class="mb-2">We respond immediately if there are any major issues or updates. Our account manager will reply as early as possible to emails in case of urgent queries.</p>
-                <p class="mb-2">Please remember, you are always welcome to contact us anytime via phone if there is any significant change in your project.</p>
+                <p class="mb-2 text-white">The status of the project will be reported within few hours upon your query via Email.</p>
+                <p class="mb-2 text-white">We respond immediately if there are any major issues or updates. Our account manager will reply as early as possible to emails in case of urgent queries.</p>
+                <p class="mb-2 text-white">Please remember, you are always welcome to contact us anytime via phone if there is any significant change in your project.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 Is there any agreement before outsourcing?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">Yes. We make an agreement for monthly works. We prepare SLA before starting any outsourcing task on a monthly basis.</p>
-                <p class="mb-2">In the case of hourly work, instead of an agreement, we give you our quote along with all the terms and conditions associated with the project.</p>
+                <p class="mb-2 text-white">Yes. We make an agreement for monthly works. We prepare SLA before starting any outsourcing task on a monthly basis.</p>
+                <p class="mb-2 text-white">In the case of hourly work, instead of an agreement, we give you our quote along with all the terms and conditions associated with the project.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 Can I hire you on a trial period basis?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">Of course, yes, you can hire us based on the working period.</p>
-                <p class="mb-2">You can hire us for a day’s period for quality as well as performance measurement and review our quote price.</p>
+                <p class="mb-2 text-white">Of course, yes, you can hire us based on the working period.</p>
+                <p class="mb-2 text-white">You can hire us for a day’s period for quality as well as performance measurement and review our quote price.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 What is the eligibility of your data entry operators?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">Our data entry operators are undergraduates and they are experts in touch typing.</p>
-                <p class="mb-2">We conduct various typing tests like 10 key tests, speed typing test, etc. and hire highly skilled data entry operators.</p>
+                <p class="mb-2 text-white">Our data entry operators are undergraduates and they are experts in touch typing.</p>
+                <p class="mb-2 text-white">We conduct various typing tests like 10 key tests, speed typing test, etc. and hire highly skilled data entry operators.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 I have a specialized data entry more of a Virtual Assistant work. Could you perform that?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">Yes. We can perform web search or any other requested VA works.</p>
-                <p class="mb-2">Please explain your description/requirements clearly so that we can meet your expectations.</p>
+                <p class="mb-2 text-white">Yes. We can perform web search or any other requested VA works.</p>
+                <p class="mb-2 text-white">Please explain your description/requirements clearly so that we can meet your expectations.</p>
             </div>
         </div>
 
         <div class="border collapse collapse-plus">
         <input type="radio" name="my-accordion-3" /> 
-            <div class="text-xl font-semibold text-white collapse-title">
+            <div class="text-xl font-semibold text-orange-400 collapse-title">
                 Why is our phone number to be given mandatory?
             </div>
             <div class="collapse-content"> 
-                <p class="mb-2">We use your phone number only to contact you in case of emergencies regarding your project on not getting your reply via e-mail. 
+                <p class="mb-2 text-white">We use your phone number only to contact you in case of emergencies regarding your project on not getting your reply via e-mail. 
                     Otherwise, we never disturb you and never share or forward your phone number to other companies or anybody.
                 </p>
             </div>

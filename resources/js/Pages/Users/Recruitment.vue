@@ -90,7 +90,7 @@ onUnmounted(() => {
                 <p>● With experience as an External Auditor.</p>
 
                 <div class="justify-end card-actions">
-                    <button class="btn btn-primary">Apply Now!</button>
+                    <button @click="" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">Apply Now!</button>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@ onUnmounted(() => {
                 <p>● Amenable to work in shifting schedule.</p>
 
                 <div class="justify-end card-actions">
-                    <button class="btn btn-primary">Apply Now!</button>
+                    <button @click="" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">Apply Now!</button>
                 </div>
             </div>
         </div>
@@ -136,7 +136,7 @@ onUnmounted(() => {
                 <p>● With Certification in Basic Occupational Safety and Health (40 hours).</p>
 
                 <div class="justify-end card-actions">
-                    <button class="btn btn-primary">Apply Now!</button>
+                    <button @click="" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">Apply Now!</button>
                 </div>
             </div>
         </div>
@@ -163,7 +163,7 @@ onUnmounted(() => {
                 <p>● Graduates of other courses, undergraduates and students are very welcome to apply.</p>
 
                 <div class="justify-end card-actions">
-                    <button class="btn btn-primary">Apply Now!</button>
+                    <button @click="" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">Apply Now!</button>
                 </div>
             </div>
         </div>
@@ -183,7 +183,7 @@ onUnmounted(() => {
                 <p>● Graduates of other courses, undergraduates and students are very welcome to apply.</p>
 
                 <div class="justify-end card-actions">
-                    <button class="btn btn-primary">Apply Now!</button>
+                    <button @click="" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">Apply Now!</button>
                 </div>
             </div>
         </div>
@@ -221,7 +221,7 @@ onUnmounted(() => {
                 <p>● Excellent mentoring, coaching and people management skills and an open attitude to feedback.</p>
 
                 <div class="justify-end card-actions">
-                    <button class="btn btn-primary">Apply Now!</button>
+                    <button @click="" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">Apply Now!</button>
                 </div>
             </div>
         </div>
@@ -255,7 +255,7 @@ onUnmounted(() => {
                 <p>● With experience as an External Auditor.</p>
 
                 <div class="justify-end card-actions">
-                    <button class="btn btn-primary">Apply Now!</button>
+                    <button @click="" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">Apply Now!</button>
                 </div>
             </div>
         </div>
@@ -277,7 +277,7 @@ onUnmounted(() => {
                 <p>● Amenable to work in shifting schedule.</p>
 
                 <div class="justify-end card-actions">
-                    <button class="btn btn-primary">Apply Now!</button>
+                    <button @click="" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">Apply Now!</button>
                 </div>
             </div>
         </div>

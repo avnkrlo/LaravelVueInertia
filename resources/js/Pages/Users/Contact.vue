@@ -105,13 +105,13 @@ const goToCCK_JP = () => {
 
 <template>
     <!-- JUMBOTRON -->
-    <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+    <!-- <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
         <div class="max-w-screen-xl px-4 py-24 mx-auto text-center lg:py-56">
             <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
                 It takes more than interest, we have plans and strategies specifically for your business needs.
             </h1>
         </div>
-    </section>
+    </section> -->
 
     <!-- Back to top button -->
     <button type="button" @click="scrollToTop" id="btn-back-to-top" ref="btnBackToTop" class="!fixed bottom-5 end-5 hidden rounded-full bg-orange-600 p-3 text-xs font-medium uppercase leading-tight text-white border border-orange-300 shadow-md transition duration-150 ease-in-out hover:bg-transparent hover:shadow-lg hover:text-orange-300 focus:bg-orange-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-600 active:shadow-lg">
@@ -122,7 +122,7 @@ const goToCCK_JP = () => {
         </span>
     </button>
 
-    <div>
+    <div class="pt-10">
         <h1 class="grid mt-10 mb-5 text-4xl font-bold text-white uppercase place-content-center">Get in touch with our amazing team, and let's talk strategy!</h1>
         <h1 class="flex items-center justify-center mb-5 text-2xl text-white">Contact us for your Data Entry and Software Developement nees by filling the form below:</h1>
         

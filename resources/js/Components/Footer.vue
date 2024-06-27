@@ -18,7 +18,7 @@ const goToYT = () => {
 }
 
 const goToPrivacy = () => {
-    window.open()
+    
 }
 </script>
 

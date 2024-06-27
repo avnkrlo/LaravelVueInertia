@@ -1,6 +1,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const goToApplicationPage = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdthyARNEpM-ox5BAT_S2rjmUXMYsM5MSkvRsXOGcQj1nN-og/viewform');
+}
+
 const btnBackToTop = ref(null);
 
 const scrollToTop = () => {
@@ -174,7 +178,7 @@ onUnmounted(() => {
         </p>
         
         <div class="grid mt-5 place-content-end">
-            <button @click="" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">
+            <button @click="goToApplicationPage()" class="inline-flex items-center justify-center px-10 py-3 text-3xl text-center text-white bg-orange-600 border border-orange-300 rounded-lg hover:text-orange-300 sm:ms-4 hover:bg-transparent focus:ring-4 focus:ring-orange-300">
                 Join Us!
             </button>  
         </div>
